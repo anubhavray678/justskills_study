@@ -103,7 +103,10 @@ const WritePage = () => {
         className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
+      <select
+        className={styles.select}
+        onChange={(e) => setCatSlug(e.target.value)}
+      >
         <option value="style">style</option>
         <option value="fashion">fashion</option>
         <option value="food">food</option>
