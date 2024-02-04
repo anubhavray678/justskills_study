@@ -9,21 +9,23 @@ const LoginPage = () => {
 
   const router = useRouter();
   useEffect(() => {
-    // wrap your async call here
-    const loadData = async () => {
-      if (status === "loading") {
-        return <div className={styles.loading}>Loading...</div>;
-      }
+    // Check if window is defined (client-side)
+    if (typeof window !== "undefined") {
+      // wrap your async call here
+      const loadData = async () => {
+        if (status === "loading") {
+          return <div className={styles.loading}>Loading...</div>;
+        }
 
-      if (status === "authenticated") {
-        router.push("/");
-        return;
-      }
-    };
+        if (status === "authenticated") {
+          router.push("/");
+        }
+      };
 
-    // then call it here
-    loadData();
-  }, []);
+      // then call it here
+      loadData();
+    }
+  }, [status, router]);
 
   // if (status === "loading") {
   //   return <div className={styles.loading}>Loading...</div>;

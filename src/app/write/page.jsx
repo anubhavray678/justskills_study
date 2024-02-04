@@ -13,8 +13,13 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
 
+const ReactQuillNoSSRWrapper = dynamic(() => import("react-quill"), {
+  // Import ReactQuill dynamically
+  ssr: false, // Exclude it from server-side rendering
+});
 const WritePage = () => {
   const { status } = useSession();
   const router = useRouter();
@@ -62,6 +67,7 @@ const WritePage = () => {
   }, [file]);
 
   useEffect(() => {
+    // wrap your async call here
     const loadData = async () => {
       if (status === "loading") {
         return <div className={styles.loading}>Loading...</div>;
@@ -71,6 +77,8 @@ const WritePage = () => {
         router.push("/");
       }
     };
+
+    // then call it here
     loadData();
   }, []);
 
@@ -144,7 +152,7 @@ const WritePage = () => {
             </button>
           </div>
         )}
-        <ReactQuill
+        <ReactQuillNoSSRWrapper
           className={styles.textArea}
           theme="bubble"
           value={value}
