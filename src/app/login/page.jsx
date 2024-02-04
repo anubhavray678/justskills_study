@@ -2,19 +2,41 @@
 import { signIn, useSession } from "next-auth/react";
 import styles from "./loginPage.module.css";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const LoginPage = () => {
   const { status } = useSession();
 
   const router = useRouter();
+  useEffect(() => {
+    // wrap your async call here
+    const loadData = async () => {
+      if (status === "loading") {
+        return <div className={styles.loading}>Loading...</div>;
+      }
 
-  if (status === "loading") {
-    return <div className={styles.loading}>Loading...</div>;
-  }
+      if (status === "authenticated") {
+        router.push("/");
+        return;
+      }
+    };
 
-  if (status === "authenticated") {
-    router.push("/");
-  }
+    // then call it here
+    loadData();
+  }, []);
+
+  // if (status === "loading") {
+  //   return <div className={styles.loading}>Loading...</div>;
+  // }
+
+  // if (status === "authenticated") {
+  //   router.push("/");
+  //   return;
+  // }
+  // if (check) {
+  //   router.push('/some/path');
+  //   return;
+  // }
 
   return (
     <div className={styles.container}>
