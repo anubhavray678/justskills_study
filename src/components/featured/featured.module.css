@@ -48,7 +48,7 @@
   border-radius: 5px;
   width: max-content;
 }
-.button :hover{
+button :hover{
   background-color: #886bfa;
   color: white;
   cursor: pointer;
