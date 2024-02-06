@@ -12,7 +12,7 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .textContainer {
@@ -45,6 +45,12 @@
 
 @media screen and (max-width: 1280px) {
   .imageContainer {
-    display: none;
+    display: flex;
+  height: 300px;
+
+   
+  }
+  .image {
+    object-fit:fill;
   }
 }

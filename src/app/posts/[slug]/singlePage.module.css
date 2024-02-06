@@ -49,7 +49,7 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .content {
@@ -85,6 +85,10 @@
   .infoContainer{
     display: grid;
   }
+  .content {
+    display: grid;
+    gap: 50px;
+  }
 }
 @media screen and (max-width: 640px) {
   .title {
@@ -93,5 +97,9 @@
 
   .description p{
     font-size: 18px;
+  }
+  .content {
+    display: grid;
+    gap: 50px;
   }
 }

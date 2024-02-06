@@ -21,16 +21,16 @@ const Footer = () => {
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/read">Read</Link>
           <Link href="https://justskills.in/about">About</Link>
           <Link href="https://justskills.in/contact">Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/blog?cat=style">Style</Link>
-          <Link href="/blog?cat=fashion">Fashion</Link>
-          <Link href="/blog?cat=coding">Coding</Link>
-          <Link href="/blog?cat=travel">Travel</Link>
+          <Link href="/read?cat=style">Style</Link>
+          <Link href="/read?cat=fashion">Fashion</Link>
+          <Link href="/read?cat=coding">Coding</Link>
+          <Link href="/read?cat=travel">Travel</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>

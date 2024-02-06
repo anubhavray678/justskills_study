@@ -21,6 +21,9 @@ const Navbar = () => {
         <Link href="/" className={styles.link}>
           Homepage
         </Link>
+        <Link href="/read" className={styles.link}>
+          Read
+        </Link>
         <Link href="https://justskills.in/contact" className={styles.link}>
           Contact
         </Link>
