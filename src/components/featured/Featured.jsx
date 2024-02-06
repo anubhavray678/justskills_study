@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Featured = () => {
   return (
@@ -22,7 +23,9 @@ const Featured = () => {
             laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
             quisquam! Harum unde sit culpa debitis.
           </p>
-          <button className={styles.button}>Read More</button>
+          <Link href="/read">
+            <button className={styles.button}>Read More</button>
+          </Link>
         </div>
       </div>
     </div>
