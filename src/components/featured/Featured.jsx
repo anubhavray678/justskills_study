@@ -24,11 +24,7 @@ const Featured = () => {
             quisquam! Harum unde sit culpa debitis.
           </p>
           <Link href="/read">
-            <button
-              className={styles.button`hover:bg-[#886bfa] pointer text-white`}
-            >
-              Read More
-            </button>
+            <button className={styles.button}>Read More</button>
           </Link>
         </div>
       </div>
