@@ -84,6 +84,28 @@ const getData = async (slug) => {
   return res.json();
 };
 
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = params.id;
+
+  // fetch data
+  const post = await getData(params.slug);
+  const title = post?.title;
+  const description = post?.desc;
+  const image = post.img;
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      images: [image, ...previousImages],
+    },
+  };
+}
+
 const SinglePage = ({ params }) => {
   const { slug } = params;
   const [data, setData] = useState(null);
