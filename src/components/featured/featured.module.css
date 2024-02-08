@@ -19,6 +19,8 @@
   flex: 1;
   height: 500px;
   position: relative;
+  background-image: linear-gradient(rgb(187, 247, 247),rgb(246, 169, 157));
+
 }
 
 .image {

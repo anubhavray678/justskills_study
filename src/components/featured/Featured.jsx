@@ -15,13 +15,18 @@ const Featured = () => {
         </div>
         <div className={styles.textContainer}>
           <h1 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet alim consectetur adipisicing elit.
+            Navigating the World of Tomorrow, One Byte at a Time.
           </h1>
           <p className={styles.postDesc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, quam nisi magni ea laborum inventore voluptatum
-            laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-            quisquam! Harum unde sit culpa debitis.
+            Delve into the vast universe of technology with a keen eye for
+            detail and a passion for exploration.
+            <br /> Here, we bring you in-depth analyses, comprehensive guides,
+            and thought-provoking discussions on all things tech. From the
+            latest breakthroughs in artificial intelligence to the intricacies
+            of blockchain technology, we&apos;re your trusted companion on the
+            journey through the ever-evolving landscape of innovation. Join us
+            as we unravel the complexities, celebrate the advancements, and
+            envision the future of technology, one big description at a time.
           </p>
           <Link href="/read">
             <button className={styles.button}>Read More</button>
