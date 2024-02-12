@@ -31,6 +31,12 @@ const Comments = ({ postSlug }) => {
   const [desc, setDesc] = useState("");
 
   const handleSubmit = async () => {
+    if (!desc || !postSlug) {
+      // Check if desc or postSlug is empty
+      alert("Comment is missing");
+      // console.error("Comment text or post slug is missing.");
+      return;
+    }
     await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({ desc, postSlug }),
