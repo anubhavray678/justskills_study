@@ -26,9 +26,9 @@ const Footer = () => {
           <Link href="https://justskills.in/contact">Contact</Link>
         </div>
         <div className={styles.list}>
-          <span className={styles.listTitle}>Tags</span>
-          <Link href="/read?cat=style">Style</Link>
-          <Link href="/read?cat=fashion">Fashion</Link>
+          <span className={styles.listTitle}>Categories</span>
+          <Link href="/read?cat=style">Android</Link>
+          <Link href="/read?cat=fashion">Emerging Tech</Link>
           <Link href="/read?cat=coding">Coding</Link>
           <Link href="/read?cat=travel">Travel</Link>
         </div>
