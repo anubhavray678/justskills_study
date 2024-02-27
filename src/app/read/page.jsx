@@ -7,9 +7,15 @@ const BlogPage = ({ searchParams }) => {
   const { cat } = searchParams;
 
   const images = [
-    { id: "1", category: "fashion", imgUrl: "/culture.png" },
-    { id: "2", category: "style", imgUrl: "/coding.png" },
-    { id: "3", category: "coding", imgUrl: "/read.png" },
+    { id: "1", category: "android", imgUrl: "/culture.png" },
+    { id: "2", category: "emerging-tech", imgUrl: "/coding.png" },
+    {
+      id: "5",
+      category: "coding",
+      imgUrl:
+        "https://www.springboard.com/blog/wp-content/uploads/2022/09/programmng-language.jpg",
+    },
+    { id: "4", category: "placement", imgUrl: "/read.png" },
   ];
   return (
     <div className={styles.container}>
@@ -37,7 +43,7 @@ const BlogPage = ({ searchParams }) => {
               src={imgNew}
               alt=""
               className="invisible"
-              style={{ objectFit: "cover", width: "100vw", height: "100%" }}
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
             // </div>
           );
