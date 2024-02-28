@@ -284,12 +284,12 @@ const WritePage = () => {
         className={styles.select}
         onChange={(e) => setCatSlug(e.target.value)}
       >
-        <option value="style">style</option>
-        <option value="fashion">fashion</option>
-        <option value="food">food</option>
+        <option value="style">android</option>
+        <option value="fashion">emerging-tech</option>
+        <option value="food">coding</option>
         <option value="culture">culture</option>
         <option value="travel">travel</option>
-        <option value="coding">coding</option>
+        <option value="coding">placement</option>
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
