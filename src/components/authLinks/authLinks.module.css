@@ -1,5 +1,13 @@
 .link {
   cursor: pointer;
+  background-color: rgb(175, 140, 250);
+  color: #fff;
+  padding: 4px;
+  border: 0;
+  border-radius: 5px;
+}
+.profile{
+  border-radius: 50%;
 }
 
 .burger {
