@@ -20,9 +20,9 @@ const AuthLinks = () => {
           height={32}
         />
 
-        <span className={styles.link} onClick={signOut}>
+        {/* <span className={styles.link} onClick={signOut}>
           <button className={styles.link}>Logout</button>
-        </span>
+        </span> */}
 
         <div className={styles.burger} onClick={() => setOpen(!open)}>
           <div className={styles.line}></div>
