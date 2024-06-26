@@ -4,34 +4,58 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  /* justify-content: center; */
+  align-items: center;
+  border: solid 1px #dcd8d8ae;
+  padding: 10px;
+  border-top: solid 3px #000;
+  /* width: 100%; */
 }
 
 .categoryItem {
   padding: 10px 25px;
-  border-radius: 10px;
+  display: flex;
   font-size: 14px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  border: solid 1px #bbb7b780;
+  cursor: pointer;
+
+}
+.categoryItem:hover{
+  background-color: rgba(128, 128, 128, 0.118);
+}
+.subtitle {
+  color: gray;
+  font-size: 16px;
+  font-weight: 400;
+}
+.title {
+  font-size: 28px;
 }
 
-.categoryItem.style {
-  background-color: #57c4ff31;
+/* .style {
+  color: #57c4ff;
 }
 
-.categoryItem.fashion {
-  background-color: #da85c731;
+.fashion {
+  color: #da85c8;
 }
 
-.categoryItem.food {
-  background-color: #7fb88133;
+.food {
+  color: #7fb881;
 }
 
-.categoryItem.travel {
-  background-color: #ff795736;
+.travel {
+  color: #ff7957;
 }
 
-.categoryItem.culture {
-  background-color: #ffb04f45;
+.culture {
+  color: #ffb04f;
 }
 
-.categoryItem.coding {
-  background-color: #5e4fff31;
-}
+.coding {
+  color: #5e4fff;
+} */

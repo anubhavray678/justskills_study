@@ -6,17 +6,14 @@ import Link from "next/link";
 const Featured = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>
-        <b>Welcome to Justskills!</b> Explore new and creative ideas.
-      </h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
           <Image src="/read.png" alt="" fill className={styles.image} />
         </div>
         <div className={styles.textContainer}>
-          {/* <h1 className={styles.postTitle}>
+          <h1 className={styles.postTitle}>
             Navigating the World of Tomorrow, One Byte at a Time.
-          </h1> */}
+          </h1>
           <p className={styles.postDesc}>
             Delve into the vast universe of technology with a keen eye for
             detail and a passion for exploration.

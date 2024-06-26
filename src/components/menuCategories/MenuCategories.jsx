@@ -1,46 +1,105 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./menuCategories.module.css";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 
 const MenuCategories = () => {
   return (
     <div className={styles.categoryList}>
-      <Link
-        href="/read?cat=android"
-        className={`${styles.categoryItem} ${styles.style}`}
-      >
-        Android
-      </Link>
-      <Link
-        href="/read?cat=emerging-tech"
-        className={`${styles.categoryItem} ${styles.fashion}`}
-      >
-        Emerging-tech
-      </Link>
-      <Link
-        href="/read?cat=coding"
-        className={`${styles.categoryItem} ${styles.food}`}
-      >
-        coding
-      </Link>
-      <Link
-        href="/read?cat=travel"
-        className={`${styles.categoryItem} ${styles.travel}`}
-      >
-        Travel
-      </Link>
-      <Link
-        href="/read?cat=culture"
-        className={`${styles.categoryItem} ${styles.culture}`}
-      >
-        Culture
-      </Link>
-      <Link
-        href="/read?cat=placement"
-        className={`${styles.categoryItem} ${styles.coding}`}
-      >
-        placement
-      </Link>
+      <div className="pl-1">
+        <h2 className="text-xl font-sans font-bold">Discover by Categories</h2>
+        <div className="flex place-items-center">
+          <h1 className="underline font-sans">Explore all articles</h1>
+          <MdArrowOutward />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 gap-3 w-full items-center place-items-center">
+        <Link href="/read?cat=android">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold text-gray-600">
+                Android
+              </li>
+              <li className="font-sans text-gray-700">
+                Stay updated with the latest Android news, including new
+                releases, updates, tips, and tricks.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=emerging-tech">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold text-gray-600">
+                Emerging-tech
+              </li>
+              <li className="font-sans text-gray-700">
+                Dive into the world of emerging technologies, covering
+                innovations and trends.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=coding">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold text-gray-600">
+                Coding
+              </li>
+              <li className="font-sans text-gray-700">
+                Explore coding tutorials, best practices, new programming
+                languages, and developer tools.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=travel">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold text-gray-600">
+                Travel
+              </li>
+              <li className="font-sans text-gray-700">
+                Discover travel guides, tips, and inspirational stories about
+                the most beautiful destinations.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=culture">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold text-gray-600">
+                Culture
+              </li>
+              <li className="font-sans text-gray-700">
+                Learn about different cultures, traditions, and social practices
+                from various communities.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=placement">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold text-gray-600">
+                Placement
+              </li>
+              <li className="font-sans text-gray-700">
+                Get insights and advice on job placements, including interview
+                experiences.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };
