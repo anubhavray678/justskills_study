@@ -12,14 +12,15 @@ const AuthLinks = () => {
   if (data && data.user) {
     return (
       <>
-        <Image
-          src={data.user.image}
-          alt={data.user.name}
-          className={styles.profile}
-          width={32}
-          height={32}
-        />
-
+        <Link href={"/profile"}>
+          <Image
+            src={data.user.image}
+            alt={data.user.name}
+            className={styles.profile}
+            width={32}
+            height={32}
+          />
+        </Link>
         {/* <span className={styles.link} onClick={signOut}>
           <button className={styles.link}>Logout</button>
         </span> */}
