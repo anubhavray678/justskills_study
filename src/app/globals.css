@@ -48,7 +48,7 @@ a {
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--textColor);
-  /* display: contents; */
+  width: 100vw;
 }
 
 .wrapper {
