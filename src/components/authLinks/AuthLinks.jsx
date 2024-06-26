@@ -53,7 +53,7 @@ const AuthLinks = () => {
   } else {
     return (
       <>
-        <Link href="/login" className={styles.link}>
+        <Link href="/login" className={styles.links}>
           Login
         </Link>
         <button></button>
