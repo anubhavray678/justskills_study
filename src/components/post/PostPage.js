@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import Menu from "@/components/Menu/Menu";
 import styles from "@/app/posts/[slug]/singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
+import MenuCategories from "../menuCategories/MenuCategories";
 
 const getData = async (slug) => {
   const res = await fetch(`https://study.justskills.in/api/posts/${slug}`, {
@@ -80,7 +80,7 @@ function PostPage({ params }) {
             </div>
           )}
         </div>
-        <Menu />
+        <MenuCategories />
       </div>
     </div>
   );

@@ -4,11 +4,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  /* justify-content: center; */
   align-items: center;
   border: solid 1px #dcd8d8ae;
   padding: 10px;
   border-top: solid 3px #000;
- 
+  /* width: 100%; */
 }
 
 .categoryItem {
