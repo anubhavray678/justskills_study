@@ -11,9 +11,11 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.logo}>
         <Image src={logo} alt="" className="Applogo" />
-        <div>
-          Just<span style={{ color: " rgb(234 179 8)" }}>Skills</span>
-        </div>
+        <Link href={"/"}>
+          <div>
+            Just<span style={{ color: " rgb(234 179 8)" }}>Skills</span>
+          </div>
+        </Link>
       </div>
 
       <div className={styles.links}>

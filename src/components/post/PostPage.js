@@ -80,9 +80,9 @@ function PostPage({ params }) {
             </div>
           )}
         </div>
-        <div>
-          <MenuCategories />
-        </div>
+        {/* <div> */}
+        <MenuCategories />
+        {/* </div> */}
       </div>
     </div>
   );
