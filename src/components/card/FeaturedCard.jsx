@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./card.module.css";
+import styles from "./FeaturedCard.module.css";
 import Link from "next/link";
 
-const Card = ({ item }) => {
+const FeaturedCard = ({ item }) => {
   return (
     <div className={styles.container}>
       {item.img && (
@@ -13,9 +13,6 @@ const Card = ({ item }) => {
       )}
       <div className={styles.textContainer}>
         <div className={styles.detail}>
-          <span className={styles.date}>
-            {item.createdAt.substring(0, 10)} -{" "}
-          </span>
           <span className={styles.category}>{item.catSlug}</span>
         </div>
         <Link href={`/posts/${item.slug}`}>
@@ -34,4 +31,4 @@ const Card = ({ item }) => {
   );
 };
 
-export default Card;
+export default FeaturedCard;
