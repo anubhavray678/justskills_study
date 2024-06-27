@@ -11,10 +11,10 @@ export default function Home({ searchParams }) {
   return (
     <div className={styles.container}>
       <Featured />
-      <div>
+      <div className=" grid md:flex">
         <LatestBlog />
+        <Menu />
       </div>
-      <Menu />
     </div>
   );
 }
