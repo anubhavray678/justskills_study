@@ -34,6 +34,20 @@ function PostPage({ params }) {
 
     fetchData();
   }, [slug]);
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: data.title,
+          text: data.desc.substring(0, 100), // Just sharing a part of the description
+          url: window.location.href,
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.error("Error sharing:", error));
+    } else {
+      console.log("Web Share API not supported in this browser.");
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -61,7 +75,10 @@ function PostPage({ params }) {
                 </div>
               </div>
 
-              <button className="bg-green-600">
+              <button
+                className="bg-green-600 p-4 rounded"
+                onClick={handleShare}
+              >
                 Share <FaShareAlt />
               </button>
             </div>
@@ -87,9 +104,8 @@ function PostPage({ params }) {
             </div>
           )}
         </div>
-        {/* <div> */}
+
         <MenuCategories />
-        {/* </div> */}
       </div>
     </div>
   );
