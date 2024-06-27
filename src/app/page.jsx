@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./homepage.module.css";
 import Featured from "@/components/featured/Featured";
 import LatestBlog from "@/components/latestBlog/LatestBlog";
-import MenuCategories from "@/components/menuCategories/MenuCategories";
 
 export default function Home({ searchParams }) {
   const page = parseInt(searchParams.page) || 1;
@@ -12,7 +11,6 @@ export default function Home({ searchParams }) {
       <Featured />
       <div className={styles.content}>
         <LatestBlog />
-        <MenuCategories />
       </div>
     </div>
   );

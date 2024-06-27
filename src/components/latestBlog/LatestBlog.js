@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ClipLoader from "react-spinners/ClipLoader"; // Import the spinner
+import MenuCategories from "../menuCategories/MenuCategories";
 
 const getBlog = async () => {
   try {
@@ -80,42 +81,44 @@ const LatestBlog = () => {
       <h2 className="text-3xl uppercase font-extrabold text-[#252939] text-center font-sans">
         LATEST ARTICLES
       </h2>
+      <div className="flex flex-col md:flex-row gap-10">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-2/3">
+          {blogs.slice(0, displayedBlogsCount).map((blog) => (
+            <div key={blog.id}>
+              <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm">
+                <ImageWithSpinner src={blog.img} alt={blog.title} />
 
-      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-2/3">
-        {blogs.slice(0, displayedBlogsCount).map((blog) => (
-          <div key={blog.id}>
-            <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm">
-              <ImageWithSpinner src={blog.img} alt={blog.title} />
-
-              <div className="p-4 sm:p-6">
-                <Link href={`/posts/${blog.slug}`} passHref>
-                  <h3 className="text-lg font-medium text-gray-900 hover:underline line-clamp-2">
-                    {blog.title}
-                  </h3>
-                </Link>
-                <Link href={`/posts/${blog.slug}`} passHref>
-                  <div
-                    className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline"
-                    dangerouslySetInnerHTML={{ __html: blog.desc }}
-                  />
-                </Link>
-                <Link
-                  href={`/posts/${blog.slug}`}
-                  className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-indigo-400"
-                  aria-label={`Read more about ${blog.title}`}
-                >
-                  <p>Read more</p>
-                  <span
-                    aria-hidden="true"
-                    className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+                <div className="p-4 sm:p-6">
+                  <Link href={`/posts/${blog.slug}`} passHref>
+                    <h3 className="text-lg font-medium text-gray-900 hover:underline line-clamp-2">
+                      {blog.title}
+                    </h3>
+                  </Link>
+                  <Link href={`/posts/${blog.slug}`} passHref>
+                    <div
+                      className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline"
+                      dangerouslySetInnerHTML={{ __html: blog.desc }}
+                    />
+                  </Link>
+                  <Link
+                    href={`/posts/${blog.slug}`}
+                    className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-indigo-400"
+                    aria-label={`Read more about ${blog.title}`}
                   >
-                    &rarr;
-                  </span>
-                </Link>
-              </div>
-            </article>
-          </div>
-        ))}
+                    <p>Read more</p>
+                    <span
+                      aria-hidden="true"
+                      className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+                    >
+                      &rarr;
+                    </span>
+                  </Link>
+                </div>
+              </article>
+            </div>
+          ))}
+        </div>
+        <MenuCategories className="" />
       </div>
 
       {displayedBlogsCount < blogs.length && (

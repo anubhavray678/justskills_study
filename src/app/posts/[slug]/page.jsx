@@ -1,3 +1,4 @@
+import LatestBlog from "@/components/latestBlog/LatestBlog";
 import PostPage from "@/components/post/PostPage";
 
 const getData = async (slug) => {
@@ -35,7 +36,12 @@ export async function generateMetadata({ params, searchParams }, parent) {
 }
 
 const SinglePage = ({ params }) => {
-  return <PostPage params={params} />;
+  return (
+    <>
+      <PostPage params={params} />
+      <LatestBlog />
+    </>
+  );
 };
 
 export default SinglePage;
