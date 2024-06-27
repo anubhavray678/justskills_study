@@ -77,7 +77,7 @@ const LatestBlog = () => {
 
   return (
     <div className="mt-10">
-      <h2 className="text-[2.37rem] uppercase font-extrabold text-[#252939] text-center">
+      <h2 className="text-3xl uppercase font-extrabold text-[#252939] text-center font-sans">
         LATEST ARTICLES
       </h2>
 
