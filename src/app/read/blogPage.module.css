@@ -1,6 +1,6 @@
 .title{
-  background-color: #886bfa;
-  color: white;
+  /* background-color: #886bfa; */
+  color: var(--textColor);
   padding: 5px 10px;
   text-align: center;
   text-transform: capitalize;
