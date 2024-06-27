@@ -9,7 +9,7 @@
   border: solid 1px #dcd8d8ae;
   padding: 10px;
   border-top: solid 3px #000;
-  /* width: 100%; */
+  
 }
 
 .categoryItem {
@@ -18,7 +18,7 @@
   font-size: 14px;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
+  width: 100%;
   gap: 15px;
   border: solid 1px #bbb7b780;
   cursor: pointer;
