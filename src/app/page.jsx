@@ -11,11 +11,10 @@ export default function Home({ searchParams }) {
   return (
     <div className={styles.container}>
       <Featured />
-      <div className={styles.content}>
+      <div>
         <LatestBlog />
-
-        <Menu />
       </div>
+      <Menu />
     </div>
   );
 }
