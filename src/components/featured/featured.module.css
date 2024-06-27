@@ -25,7 +25,7 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .textContainer {
@@ -78,5 +78,13 @@
 @media screen and (max-width: 640px) {
   .title {
     font-size: 36px;
+  }
+  .imgContainer {
+    flex: 1;
+    height: 200px;
+    position: relative;
+    background-image: linear-gradient(rgb(187, 247, 247),rgb(246, 169, 157));
+    object-fit: contain;
+    background-size: contain;
   }
 }
