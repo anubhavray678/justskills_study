@@ -18,11 +18,12 @@ const FeaturedCard = ({ item }) => {
         <Link href={`/posts/${item.slug}`}>
           <h1>{item.title}</h1>
         </Link>
-        <div
-          // className={styles.desc}
-          className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline"
-          dangerouslySetInnerHTML={{ __html: item?.desc }}
-        />
+        <Link href={`/posts/${item.slug}`}>
+          <div
+            className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline"
+            dangerouslySetInnerHTML={{ __html: item?.desc }}
+          />
+        </Link>
         <Link href={`/posts/${item.slug}`} passHref className={styles.link}>
           Read More
         </Link>
