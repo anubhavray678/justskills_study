@@ -11,6 +11,8 @@
 .title {
   font-size: 64px;
   margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .user {
@@ -55,6 +57,8 @@
 .content {
   display: flex;
   gap: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .post {
@@ -66,6 +70,7 @@
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 1536px) {
