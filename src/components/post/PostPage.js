@@ -76,10 +76,11 @@ function PostPage({ params }) {
               </div>
 
               <button
-                className="bg-green-600 p-4 rounded"
+                className="bg-green-600 p-3 rounded text-white flex justify-between items-center gap-2"
                 onClick={handleShare}
               >
-                Share <FaShareAlt />
+                <span>Share</span>
+                <FaShareAlt />
               </button>
             </div>
           </div>
