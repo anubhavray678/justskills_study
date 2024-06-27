@@ -38,8 +38,6 @@ function PostPage({ params }) {
     if (navigator.share) {
       navigator
         .share({
-          title: data.title,
-          text: data.desc.substring(0, 100), // Just sharing a part of the description
           url: window.location.href,
         })
         .then(() => console.log("Successful share"))
@@ -76,7 +74,7 @@ function PostPage({ params }) {
               </div>
 
               <button
-                className="bg-green-600 p-3 rounded text-white flex justify-between items-center gap-2"
+                className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
                 onClick={handleShare}
               >
                 <span>Share</span>
