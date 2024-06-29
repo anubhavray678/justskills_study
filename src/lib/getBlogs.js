@@ -8,7 +8,7 @@ export default async function getBlogs() {
 
     // Generate URLs for each blog post
     const urls = posts.map((post) => ({
-      url: `https://blog.fastbricks.in/posts/${post.slug}`,
+      url: `https://study.justskills.in/posts/${post.slug}`,
       lastModified: post.createdAt, // Assuming there's an updatedAt field in your database
       changeFrequency: "daily", // Adjust according to your preference
       priority: 0.7, // Adjust according to your preference
