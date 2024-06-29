@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
               <div className="container">
                 <div className="wrapper">
                   <Navbar />
-                  {children}
+                  <div className="pt-[100px]">{children}</div>
                   <Footer />
                 </div>
               </div>
