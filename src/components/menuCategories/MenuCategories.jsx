@@ -18,10 +18,8 @@ const MenuCategories = () => {
         <Link href="/read?cat=android">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold text-gray-600">
-                Android
-              </li>
-              <li className="font-sans text-gray-700">
+              <li className="text-xl font-sans font-semibold ">Android</li>
+              <li className="font-sans ">
                 Stay updated with the latest Android news, including new
                 releases, updates, tips, and tricks.
               </li>
@@ -32,10 +30,10 @@ const MenuCategories = () => {
         <Link href="/read?cat=emerging-tech">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold text-gray-600">
+              <li className="text-xl font-sans font-semibold ">
                 Emerging-tech
               </li>
-              <li className="font-sans text-gray-700">
+              <li className="font-sans ">
                 Dive into the world of emerging technologies, covering
                 innovations and trends.
               </li>
@@ -46,10 +44,8 @@ const MenuCategories = () => {
         <Link href="/read?cat=coding">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold text-gray-600">
-                Coding
-              </li>
-              <li className="font-sans text-gray-700">
+              <li className="text-xl font-sans font-semibold ">Coding</li>
+              <li className="font-sans ">
                 Explore coding tutorials, best practices, new programming
                 languages, and developer tools.
               </li>
@@ -60,10 +56,8 @@ const MenuCategories = () => {
         <Link href="/read?cat=travel">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold text-gray-600">
-                Travel
-              </li>
-              <li className="font-sans text-gray-700">
+              <li className="text-xl font-sans font-semibold ">Travel</li>
+              <li className="font-sans ">
                 Discover travel guides, tips, and inspirational stories about
                 the most beautiful destinations.
               </li>
@@ -74,10 +68,8 @@ const MenuCategories = () => {
         <Link href="/read?cat=culture">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold text-gray-600">
-                Culture
-              </li>
-              <li className="font-sans text-gray-700">
+              <li className="text-xl font-sans font-semibold ">Culture</li>
+              <li className="font-sans ">
                 Learn about different cultures, traditions, and social practices
                 from various communities.
               </li>
@@ -88,10 +80,8 @@ const MenuCategories = () => {
         <Link href="/read?cat=placement">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold text-gray-600">
-                Placement
-              </li>
-              <li className="font-sans text-gray-700">
+              <li className="text-xl font-sans font-semibold ">Placement</li>
+              <li className="font-sans ">
                 Get insights and advice on job placements, including interview
                 experiences.
               </li>

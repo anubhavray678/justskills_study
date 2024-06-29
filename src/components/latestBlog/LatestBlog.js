@@ -78,7 +78,7 @@ const LatestBlog = () => {
 
   return (
     <div className="mt-10">
-      <h2 className="text-3xl uppercase font-extrabold text-[#252939] text-center font-sans">
+      <h2 className="text-3xl uppercase font-extrabold  text-center font-sans">
         LATEST ARTICLES
       </h2>
       <div className="flex flex-col md:flex-row gap-10">

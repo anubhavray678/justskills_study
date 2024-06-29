@@ -49,6 +49,11 @@ a {
   background-color: var(--bg);
   color: var(--textColor);
   width: 100vw;
+  
+}
+.background{
+  background-color: var(--bg);
+
 }
 
 .wrapper {
