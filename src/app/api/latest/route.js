@@ -49,8 +49,8 @@ import { NextResponse } from "next/server";
 export const GET = async (req) => {
   try {
     const client = await clientPromise;
-    const db = client.db("your-database-name"); // Replace with your database name
-    const posts = await db.collection("posts").find({}).toArray();
+    const db = client.db("BlogAPP"); // Replace with your database name
+    const posts = await db.collection("Post").find({}).toArray();
 
     return NextResponse.json(posts, {
       status: 200,
