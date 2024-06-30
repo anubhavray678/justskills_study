@@ -1,13 +1,13 @@
 // utils/connect.js
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI; // Ensure you set this in your environment variables
+const uri = process.env.DATABASE_URL; // Ensure you set this in your environment variables
 const options = {};
 
 let client;
 let clientPromise;
 
-if (!process.env.MONGODB_URI) {
+if (!process.env.DATABASE_URL) {
   throw new Error("Please add your Mongo URI to .env.local");
 }
 
