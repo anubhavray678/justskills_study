@@ -311,12 +311,12 @@ const WritePage = () => {
             className="border"
             onChange={(e) => setCatSlug(e.target.value)}
           >
-            <option value="style">android</option>
-            <option value="fashion">emerging-tech</option>
-            <option value="food">coding</option>
+            <option value="android">android</option>
+            <option value="emerging-tech">emerging-tech</option>
+            <option value="coding">coding</option>
             <option value="culture">culture</option>
             <option value="travel">travel</option>
-            <option value="coding">placement</option>
+            <option value="placement">placement</option>
           </select>
           <div>
             <button className={styles.button} onClick={() => setOpen(!open)}>
