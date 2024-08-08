@@ -75,9 +75,9 @@ const WritePage = () => {
     return <div className={styles.loading}>Loading...</div>;
   }
 
-  if (status === "unauthenticated") {
-    router.push("/");
-  }
+  // if (status === "unauthenticated") {
+  //   router.push("/");
+  // }
 
   // const slugify = (str) =>
   //   str
@@ -204,7 +204,7 @@ const WritePage = () => {
       <div className="flex items-center gap-2 pt-5 justify-between pl-2 pr-2">
         <div className="flex gap-2">
           <select
-            className={styles.select}
+            className="border"
             onChange={(e) => setCatSlug(e.target.value)}
           >
             <option value="style">android</option>
