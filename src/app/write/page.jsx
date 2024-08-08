@@ -242,9 +242,9 @@ const WritePage = () => {
     return <div className={styles.loading}>Loading...</div>;
   }
 
-  if (status === "unauthenticated") {
-    router.push("/");
-  }
+  // if (status === "unauthenticated") {
+  //   router.push("/");
+  // }
 
   const slugify = (str) =>
     str
@@ -271,6 +271,42 @@ const WritePage = () => {
       router.push(`/posts/${data.slug}`);
     }
   };
+
+  const modules = {
+    toolbar: [
+      [{ header: "1" }, { header: "2" }, { font: [] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [{ script: "sub" }, { script: "super" }],
+      [{ indent: "-1" }, { indent: "+1" }, { direction: "rtl" }],
+      [{ color: [] }, { background: [] }],
+      [{ align: [] }],
+      ["link", "image", "video"],
+      ["code-block"], // Add code block button
+      ["clean"],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "font",
+    "size",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "indent",
+    "link",
+    "image",
+    "video",
+    "code-block", // Support code block format
+    "align",
+    "color",
+    "background",
+  ];
 
   return (
     <div className={styles.container}>
@@ -322,6 +358,8 @@ const WritePage = () => {
           value={value}
           onChange={setValue}
           placeholder="Tell your story..."
+          modules={modules}
+          formats={formats}
         />
       </div>
       <button className={styles.publish} onClick={handleSubmit}>
