@@ -7,11 +7,9 @@ import "react-quill/dist/quill.snow.css";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import parse from "html-react-parser";
-// import { generateSlug } from "@/libs/generateSlug";
 import { generateSlug } from "@/lib/generateSlug";
 import { Plus } from "lucide-react";
 import React from "react";
-import ReactQuill from "react-quill";
 import {
   getStorage,
   ref,
