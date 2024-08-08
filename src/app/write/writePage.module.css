@@ -2,13 +2,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: var(--softBg);
+  margin: 5px;
+  
 }
 
 .select{
-  margin-bottom: 50px;
-  padding: 10px 20px;
+  
+  padding: 5px 10px;
   margin-left: 50px;
   width: max-content;
+  border: 2px solid var(--softBg);
 }
 
 .editor {
@@ -46,12 +50,14 @@
 }
 
 .input{
-  padding: 50px;
+  padding: 10px;
   font-size: 64px;
   border: none;
   outline: none;
   background-color: transparent;
   color: var(--textColor);
+  border-bottom: 1px solid var(--textColor);
+  margin-bottom: 5px;
 }
 
 .input::placeholder{
@@ -63,7 +69,7 @@
 }
 
 .publish{
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   right: 0px;
   padding: 10px 20px;

@@ -139,3 +139,18 @@ a {
     transform: rotate(360deg);
   }
 }
+
+.blog-view {
+
+  a {
+    color: rgb(132, 77, 250);
+    font-weight: 600;
+    text-decoration:none;
+  }
+  pre {
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: whitesmoke;
+  }
+}
