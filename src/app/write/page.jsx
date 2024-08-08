@@ -407,8 +407,8 @@ const WritePage = () => {
               </label>
               <ReactQuillNoSSRWrapper
                 theme="bubble"
-                // modules={modules}
-                // formats={formats}
+                modules={modules}
+                formats={formats}
                 value={value}
                 onChange={setValue}
                 placeholder="write your article here..."
