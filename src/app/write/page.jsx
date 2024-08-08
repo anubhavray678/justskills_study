@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useState } from "react";
-import "react-quill/dist/quill.snow.css";
+import "react-quill/dist/quill.bubble.css";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import parse from "html-react-parser";
@@ -75,9 +75,9 @@ const WritePage = () => {
     return <div className={styles.loading}>Loading...</div>;
   }
 
-  if (status === "unauthenticated") {
-    router.push("/");
-  }
+  // if (status === "unauthenticated") {
+  //   router.push("/");
+  // }
 
   // const slugify = (str) =>
   //   str
@@ -281,7 +281,7 @@ const WritePage = () => {
                 htmlFor="slug"
                 className="block text-sm font-medium leading-6 text-gray-900 mb-2 "
               >
-                Blog Slug
+                Slug
               </label>
               <div className="mt-2">
                 <input
@@ -301,16 +301,18 @@ const WritePage = () => {
             <div className="sm:col-span-2">
               <label
                 htmlFor="content"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Blog Content
+                Content
               </label>
               <ReactQuillNoSSRWrapper
-                theme="snow"
+                theme="bubble"
                 modules={modules}
                 formats={formats}
                 value={value}
                 onChange={setValue}
+                className="border"
+                placeholder="write your article here..."
               />
             </div>
           </div>
@@ -326,7 +328,7 @@ const WritePage = () => {
               {/* Title */}
               <div className="sm:col-span-2">
                 <h2 className="block text-sm font-medium leading-6 text-gray-900 mb-2 ">
-                  Blog Title
+                  Title
                 </h2>
                 <div className="mt-2">
                   <p className="text-2xl font-bold">{title}</p>
@@ -335,7 +337,7 @@ const WritePage = () => {
               {/* Slug */}
               <div className="sm:col-span-2">
                 <h2 className="block text-sm font-medium leading-6 text-gray-900 mb-2 ">
-                  Blog Slug
+                  Slug
                 </h2>
                 <div className="mt-2">
                   <p>{slug}</p>
@@ -346,8 +348,8 @@ const WritePage = () => {
             <img src={media} />
 
             <div className="sm:col-span-full">
-              <h2 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Blog Content
+              <h2 className="block mb-2 text-sm font-medium text-gray-900 ">
+                Content
               </h2>
               {parse(value)}
             </div>
