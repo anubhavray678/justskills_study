@@ -141,7 +141,7 @@ a {
 }
 
 
-.ql-syntax{
+.quill-editor .ql-syntax{
   background-color: rgb(5, 2, 41);
   padding: 10px 20px;
   border-radius: 10px;
@@ -150,15 +150,15 @@ a {
   
   border:10px solid rgb(248, 244, 251);
 }
-a {
+.quill-editor a {
   color: rgb(132, 77, 250);
   font-weight: 600;
   text-decoration:none;
 }
-h1{
+.quill-editor h1{
   font-size: xx-large;
 }
-h2{
+.quill-editor h2{
   font-size: larger;
 }
 .ql-font-monospace{
@@ -171,14 +171,14 @@ h2{
   font-size: 40px;
 }
 
-blockquote {
+.quill-editor blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote:before {
+.quill-editor blockquote:before {
   color: #ccc;
   content: open-quote;
   font-size: 4em;
@@ -186,23 +186,23 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-blockquote p {
+.quill-editor blockquote p {
   display: inline;
 }
 
 
-ul {
+.quill-editor ul {
   list-style-type: circle;
   border: 2px solid rgb(212, 163, 250);
   background-color: rgb(213, 203, 238);
 }
-li {
+.quill-editor li {
   margin: 5px;
   padding: 5px;
   background-color: rgb(255, 255, 255);
 }
 
-ol {
+.quill-editor ol {
   list-style-type: decimal; /* Use decimal numbers */
   margin-left: 20px; /* Add space to the left */
   padding-left: 0; /* Remove default padding */
@@ -211,20 +211,20 @@ ol {
   line-height: 1.6; /* Line height */
 }
 
-ol li {
+.quill-editor ol li {
   margin-bottom: 10px; /* Space between items */
 }
 
-ol li::marker {
+.quill-editor ol li::marker {
   color: #6200ea; /* Marker color */
   font-weight: bold; /* Marker weight */
 }
 
-ol.custom-style {
+.quill-editor ol.custom-style {
   list-style-type: upper-roman; /* Use uppercase Roman numerals */
   padding-left: 20px; /* Custom padding */
 }
 
-ol.custom-style li::marker {
+.quill-editor ol.custom-style li::marker {
   color: #ff5722; /* Custom marker color */
 }
