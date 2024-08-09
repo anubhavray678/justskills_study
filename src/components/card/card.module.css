@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  
 }
 
 .imageContainer {
@@ -62,4 +63,11 @@
     flex-direction: column;
     gap: 15px;
   }
+}
+@media screen and (max-width: 650px){
+  .container{
+      flex-direction: row;
+      display: inline;
+  }
+ 
 }

@@ -37,7 +37,7 @@ const FeaturedArticle = async ({ page, cat }) => {
       <h1 className="font-bold font-sans text-xl pt-2 pb-2 text-indigo-500">
         Featured Post
       </h1>
-      <div className="inline">
+      <div>
         {firstPost && <FeaturedCard item={firstPost} key={firstPost._id} />}
       </div>
     </div>
