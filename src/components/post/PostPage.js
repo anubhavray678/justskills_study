@@ -93,7 +93,7 @@ function PostPage({ params }) {
         <div className={styles.post}>
           {data && (
             <div
-              className={styles.description}
+              className="quill-editor"
               dangerouslySetInnerHTML={{ __html: data.desc }}
             />
           )}
