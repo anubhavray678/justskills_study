@@ -140,17 +140,91 @@ a {
   }
 }
 
-.blog-view {
 
-  a {
-    color: rgb(132, 77, 250);
-    font-weight: 600;
-    text-decoration:none;
-  }
-  pre {
-    background-color: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: whitesmoke;
-  }
+.ql-syntax{
+  background-color: rgb(5, 2, 41);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: whitesmoke;
+  overflow-x: scroll;
+  
+  border:10px solid rgb(248, 244, 251);
+}
+a {
+  color: rgb(132, 77, 250);
+  font-weight: 600;
+  text-decoration:none;
+}
+h1{
+  font-size: xx-large;
+}
+h2{
+  font-size: larger;
+}
+.ql-font-monospace{
+  font-family: 'Courier New', Courier, monospace;
+}
+.ql-font-serif{
+  font-family: 'Times New Roman', Times, serif;
+}
+.ql-size-huge{
+  font-size: 40px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+
+ul {
+  list-style-type: circle;
+  border: 2px solid rgb(212, 163, 250);
+  background-color: rgb(213, 203, 238);
+}
+li {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+ol {
+  list-style-type: decimal; /* Use decimal numbers */
+  margin-left: 20px; /* Add space to the left */
+  padding-left: 0; /* Remove default padding */
+  color: #333; /* Text color */
+  font-size: 16px; /* Font size */
+  line-height: 1.6; /* Line height */
+}
+
+ol li {
+  margin-bottom: 10px; /* Space between items */
+}
+
+ol li::marker {
+  color: #6200ea; /* Marker color */
+  font-weight: bold; /* Marker weight */
+}
+
+ol.custom-style {
+  list-style-type: upper-roman; /* Use uppercase Roman numerals */
+  padding-left: 20px; /* Custom padding */
+}
+
+ol.custom-style li::marker {
+  color: #ff5722; /* Custom marker color */
 }

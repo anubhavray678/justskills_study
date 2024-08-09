@@ -174,7 +174,8 @@
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useState } from "react";
-import "react-quill/dist/quill.bubble.css";
+import "react-quill/dist/quill.snow.css";
+
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { generateSlug } from "@/lib/generateSlug";
@@ -245,9 +246,9 @@ const WritePage = () => {
     return <div className={styles.loading}>Loading...</div>;
   }
 
-  // if (status === "unauthenticated") {
-  //   router.push("/");
-  // }
+  if (status === "unauthenticated") {
+    router.push("/");
+  }
 
   const handleSubmit = async () => {
     const res = await fetch("/api/posts", {
@@ -275,31 +276,24 @@ const WritePage = () => {
   }
 
   //Custom Tool Bar
+
   const modules = {
     toolbar: [
-      [{ header: [1, 2, false] }],
+      [{ header: "1" }, { header: "2" }, { font: [] }],
+      [{ size: [] }],
       ["bold", "italic", "underline", "strike", "blockquote"],
       [{ list: "ordered" }, { list: "bullet" }],
-      ["link", "color"],
-      [{ "code-block": true }],
+
+      ["link"],
       ["clean"],
+      ["code-block"],
     ],
+    clipboard: {
+      // toggle to add extra line breaks when pasting HTML:
+      matchVisual: false,
+    },
   };
 
-  const formats = [
-    "header",
-    "bold",
-    "italic",
-    "underline",
-    "strike",
-    "blockquote",
-    "list",
-    "bullet",
-    "link",
-    "indent",
-    "code-block",
-    "color",
-  ];
   return (
     <div>
       <div className="text-4xl text-center font-semibold py-4 justify-center flex bg-[#06c49c]">
@@ -406,14 +400,36 @@ const WritePage = () => {
                 Content
               </label>
               <ReactQuillNoSSRWrapper
-                theme="bubble"
+                theme="snow"
                 modules={modules}
-                formats={formats}
+                // formats={formats}
+                formats={[
+                  "header",
+                  "font",
+                  "size",
+                  "bold",
+                  "italic",
+                  "underline",
+                  "strike",
+                  "blockquote",
+                  "list",
+                  "bullet",
+                  "link",
+                  "code-block",
+                ]}
+                className="blog-view"
                 value={value}
                 onChange={setValue}
                 placeholder="write your article here..."
               />
             </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold flex justify-center mt-8">
+              Preview
+            </h2>
+            <div>{value}</div>
+            <div dangerouslySetInnerHTML={{ __html: value }}></div>
           </div>
         </div>
       </div>
