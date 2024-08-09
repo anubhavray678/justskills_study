@@ -105,14 +105,31 @@ const WritePage = () => {
   }
 
   //Custom Tool Bar
-
+  const customColors = [
+    "red",
+    "green",
+    "blue",
+    "purple",
+    "white",
+    "gray",
+    "indigo",
+    "skyblue",
+  ];
+  const customBackgroundColors = [
+    "red",
+    "green",
+    "blue",
+    "purple",
+    "yellow",
+    "skyblue",
+  ];
   const modules = {
     toolbar: [
       [{ header: "1" }, { header: "2" }, { font: [] }],
       [{ size: [] }],
       ["bold", "italic", "underline", "strike", "blockquote"],
       [{ list: "ordered" }, { list: "bullet" }],
-
+      [{ color: customColors }, { background: customBackgroundColors }],
       ["link"],
       ["clean"],
       ["code-block"],
@@ -244,6 +261,8 @@ const WritePage = () => {
                     "blockquote",
                     "list",
                     "bullet",
+                    "color",
+                    "background",
                     "link",
                     "code-block",
                   ]}
