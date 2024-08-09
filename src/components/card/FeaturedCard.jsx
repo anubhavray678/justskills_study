@@ -20,7 +20,7 @@ const FeaturedCard = ({ item }) => {
         </Link>
         <Link href={`/posts/${item.slug}`}>
           <div
-            className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline inline-block"
+            className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline"
             dangerouslySetInnerHTML={{ __html: item?.desc }}
           />
         </Link>
