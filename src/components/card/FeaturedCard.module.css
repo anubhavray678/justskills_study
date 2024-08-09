@@ -1,6 +1,6 @@
 .container {
     margin-bottom: 50px;
-    display: flex;
+    display: inline;
     align-items: center;
     gap: 50px;
   }
