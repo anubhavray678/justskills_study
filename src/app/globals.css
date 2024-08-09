@@ -140,7 +140,9 @@ a {
   }
 }
 
-
+.quill-editor{
+  display: inline-grid;
+}
 .quill-editor .ql-syntax{
   background-color: rgb(5, 2, 41);
   padding: 10px 20px;
