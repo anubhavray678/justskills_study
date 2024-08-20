@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ClipLoader from "react-spinners/ClipLoader"; // Import the spinner
 import MenuCategories from "../menuCategories/MenuCategories";
+import { Adsense } from "@ctrl/react-adsense";
 
 const getBlog = async () => {
   try {
@@ -86,7 +87,11 @@ const LatestBlog = () => {
           {blogs.slice(0, displayedBlogsCount).map((blog) => (
             <div key={blog.id}>
               <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm">
-                <ImageWithSpinner src={blog.img} alt={blog.title} />
+                <ImageWithSpinner
+                  src={blog.img}
+                  alt={blog.title}
+                  url={blog.slug}
+                />
 
                 <div className="p-4 sm:p-6">
                   <Link href={`/posts/${blog.slug}`} passHref>
@@ -119,19 +124,15 @@ const LatestBlog = () => {
           ))}
         </div>
         {/* <MenuCategories className="" /> */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3581583340976914"
-          crossorigin="anonymous"
-        ></script>
-        <ins
-          class="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-format="autorelaxed"
-          data-ad-client="ca-pub-3581583340976914"
-          data-ad-slot="1167311934"
-        ></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div>
+          <Adsense
+            client="ca-pub-3581583340976914"
+            slot="1167311934"
+            style={{ display: "block" }}
+            layout="autorelaxed"
+            format="fluid"
+          />
+        </div>
       </div>
 
       {displayedBlogsCount < blogs.length && (
@@ -149,7 +150,7 @@ const LatestBlog = () => {
 };
 
 // A new component to handle the image loading
-const ImageWithSpinner = ({ src, alt }) => {
+const ImageWithSpinner = ({ src, alt, url }) => {
   const [imageLoading, setImageLoading] = useState(true);
 
   return (
@@ -159,14 +160,16 @@ const ImageWithSpinner = ({ src, alt }) => {
           <ClipLoader size={50} color={"#8a4dfa"} loading={imageLoading} />
         </div>
       )}
-      <img
-        src={src}
-        alt={alt}
-        className={`h-56 w-full object-fill transition-opacity duration-500 ${
-          imageLoading ? "opacity-0" : "opacity-100"
-        }`}
-        onLoad={() => setImageLoading(false)}
-      />
+      <Link href={`/posts/${url}`} passHref>
+        <img
+          src={src}
+          alt={alt}
+          className={`h-56 w-full object-fill transition-opacity duration-500 ${
+            imageLoading ? "opacity-0" : "opacity-100"
+          }`}
+          onLoad={() => setImageLoading(false)}
+        />
+      </Link>
     </div>
   );
 };

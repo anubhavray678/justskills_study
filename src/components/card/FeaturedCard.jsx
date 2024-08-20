@@ -48,7 +48,9 @@ const FeaturedCard = ({ item }) => {
     <div className={styles.container}>
       {item.img && (
         <div className={styles.imageContainer}>
-          <Image src={item.img} alt="" fill className={styles.image} />
+          <Link href={`/posts/${item.slug}`} passHref>
+            <Image src={item.img} alt="" fill className={styles.image} />
+          </Link>
         </div>
       )}
       <div className={styles.textContainer}>

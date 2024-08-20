@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "@/components/navbar/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -5,6 +6,8 @@ import Footer from "@/components/footer/Footer";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
+
+import { Adsense } from "@ctrl/react-adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +34,15 @@ export default function RootLayout({ children }) {
                   <Navbar />
                   <div className="pt-[100px]">{children}</div>
                   <Footer />
-                  <script
+                  {/* ca-pub-3581583340976914 */}
+                  <Adsense
+                    client="ca-pub-3581583340976914"
+                    slot="3735583844"
+                    style={{ display: "block" }}
+                    layout="in-article"
+                    format="fluid"
+                  />
+                  {/* <script
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3581583340976914"
                     crossorigin="anonymous"
@@ -45,7 +56,7 @@ export default function RootLayout({ children }) {
                   ></ins>
                   <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>
+                  </script> */}
                 </div>
               </div>
             </ThemeProvider>
