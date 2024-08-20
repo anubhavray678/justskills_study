@@ -127,7 +127,7 @@ const LatestBlog = () => {
         <div>
           <Adsense
             client="ca-pub-3581583340976914"
-            slot="1167311934"
+            slot="6170859620"
             style={{ display: "block" }}
             layout="autorelaxed"
             format="fluid"
