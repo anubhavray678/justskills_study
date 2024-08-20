@@ -5,6 +5,7 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 import MenuCategories from "../menuCategories/MenuCategories";
 import { FaShareAlt } from "react-icons/fa";
+import Article from "../ads/inArticle";
 
 const getData = async (slug) => {
   const res = await fetch(`https://study.justskills.in/api/posts/${slug}`, {
@@ -90,6 +91,8 @@ function PostPage({ params }) {
         </div>
       )}
       <div className={styles.content}>
+        <Article />
+
         <div className={styles.post}>
           {data && (
             <div
@@ -103,6 +106,7 @@ function PostPage({ params }) {
             </div>
           )}
         </div>
+        <Article />
 
         <MenuCategories />
       </div>
