@@ -1,3 +1,4 @@
+import Article from "@/components/ads/inArticle";
 import LatestBlog from "@/components/latestBlog/LatestBlog";
 import PostPage from "@/components/post/PostPage";
 
@@ -39,6 +40,7 @@ const SinglePage = ({ params }) => {
   return (
     <>
       <PostPage params={params} />
+      <Article />
       <LatestBlog />
     </>
   );
