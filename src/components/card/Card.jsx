@@ -8,7 +8,7 @@ const Card = ({ item }) => {
     <div className={styles.container}>
       {item.img && (
         <div className={styles.imageContainer}>
-          <Image src={item.img} alt="" fill className={styles.image} />
+          <Image src={item.img} alt="" fill className={styles.image} c />
         </div>
       )}
       <div className={styles.textContainer}>
@@ -21,11 +21,11 @@ const Card = ({ item }) => {
         <Link href={`/posts/${item.slug}`}>
           <h1>{item.title}</h1>
         </Link>
-        <div
+        {/* <div
           // className={styles.desc}
           className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 hover:underline"
           dangerouslySetInnerHTML={{ __html: item?.desc }}
-        />
+        /> */}
         <Link href={`/posts/${item.slug}`} passHref className={styles.link}>
           Read More
         </Link>

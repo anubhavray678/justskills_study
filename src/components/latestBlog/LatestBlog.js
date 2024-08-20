@@ -118,7 +118,20 @@ const LatestBlog = () => {
             </div>
           ))}
         </div>
-        <MenuCategories className="" />
+        {/* <MenuCategories className="" /> */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3581583340976914"
+          crossorigin="anonymous"
+        ></script>
+        <ins
+          class="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-format="autorelaxed"
+          data-ad-client="ca-pub-3581583340976914"
+          data-ad-slot="1167311934"
+        ></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
       {displayedBlogsCount < blogs.length && (

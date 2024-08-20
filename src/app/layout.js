@@ -31,6 +31,21 @@ export default function RootLayout({ children }) {
                   <Navbar />
                   <div className="pt-[100px]">{children}</div>
                   <Footer />
+                  <script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3581583340976914"
+                    crossorigin="anonymous"
+                  ></script>
+                  <ins
+                    class="adsbygoogle"
+                    style={{ display: "block" }}
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-3581583340976914"
+                    data-ad-slot="3735583844"
+                  ></ins>
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
                 </div>
               </div>
             </ThemeProvider>

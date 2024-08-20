@@ -155,7 +155,7 @@ const WritePage = () => {
               <option value="android">android</option>
               <option value="emerging-tech">emerging-tech</option>
               <option value="coding">coding</option>
-              <option value="culture">culture</option>
+              <option value="project">project</option>
               <option value="travel">travel</option>
               <option value="placement">placement</option>
             </select>

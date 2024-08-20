@@ -65,13 +65,13 @@ const MenuCategories = () => {
             <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
           </div>
         </Link>
-        <Link href="/read?cat=culture">
+        <Link href="/read?cat=project">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold ">Culture</li>
+              <li className="text-xl font-sans font-semibold ">Project</li>
               <li className="font-sans ">
-                Learn about different cultures, traditions, and social practices
-                from various communities.
+                A collection of projects in web dev showcasing practical
+                applications.
               </li>
             </ul>
             <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
