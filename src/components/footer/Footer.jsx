@@ -53,7 +53,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="">
-      <footer class="flex w-full flex-col items-center justify-center  py-4 md:flex-row md:justify-between mt-5">
+      <footer class="flex w-full flex-col items-center justify-center md:flex-row md:justify-between mt-5">
         <div class="mx-auto w-full max-w-screen-xl">
           <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
             <div>
@@ -80,30 +80,6 @@ const Footer = () => {
                     Read
                   </a>
                 </li>
-                <li class="mb-4">
-                  <a
-                    href="https://justskills.in/course"
-                    class="hover:underline"
-                  >
-                    Course
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="https://justskills.in/course"
-                    class="hover:underline"
-                  >
-                    JobSearch
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="https://compresify.justskills.in/course"
-                    class="hover:underline"
-                  >
-                    Compresify
-                  </a>
-                </li>
               </ul>
             </div>
             <div>
@@ -127,6 +103,10 @@ const Footer = () => {
                     Emerging-tech
                   </a>
                 </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
                     href="https://study.justskills.in/read?cat=coding"
@@ -149,6 +129,34 @@ const Footer = () => {
                     class="hover:underline"
                   >
                     Placement
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://justskills.in/course"
+                    class="hover:underline"
+                  >
+                    Course
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://justskills.in/course"
+                    class="hover:underline"
+                  >
+                    JobSearch
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://compresify.justskills.in/course"
+                    class="hover:underline"
+                  >
+                    Compresify
                   </a>
                 </li>
               </ul>
