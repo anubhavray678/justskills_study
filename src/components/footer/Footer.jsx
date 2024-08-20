@@ -145,7 +145,7 @@ const Footer = () => {
                 </li>
                 <li class="mb-4">
                   <a
-                    href="https://justskills.in/course"
+                    href="https://justskills.in/jobsearch"
                     class="hover:underline"
                   >
                     JobSearch
@@ -153,7 +153,7 @@ const Footer = () => {
                 </li>
                 <li class="mb-4">
                   <a
-                    href="https://compresify.justskills.in/course"
+                    href="https://compresify.justskills.in/"
                     class="hover:underline"
                   >
                     Compresify
