@@ -1,6 +1,7 @@
 import Article from "@/components/ads/inArticle";
 import LatestBlog from "@/components/latestBlog/LatestBlog";
 import PostPage from "@/components/post/PostPage";
+import Head from "next/head";
 
 const getData = async (slug) => {
   const res = await fetch(`https://study.justskills.in/api/posts/${slug}`, {
@@ -26,19 +27,37 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
+  console.log(image);
 
   return {
     title: title,
     description: description,
     openGraph: {
-      images: [image],
+      images: image,
+    },
+    twitter: {
+      images: image,
     },
   };
 }
 
-const SinglePage = ({ params }) => {
+const SinglePage = async ({ params }) => {
+  const post = await getData(params.slug);
+  const title = post?.title;
+  const description = post?.desc;
+  const image = post.img;
   return (
     <>
+      <Head>
+        <title>title</title>
+        <meta property="og:title" content={`${title}`} />
+        <meta property="og:description" content={`${description}`} />
+        <meta property="og:image" content={`${image}`} />
+
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={`${image}`} />
+      </Head>
       <PostPage params={params} />
       <Article />
       <LatestBlog />

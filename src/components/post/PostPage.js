@@ -91,6 +91,7 @@ function PostPage({ params }) {
         </div>
       )}
       <div className={styles.content}>
+        <br />
         <Article />
 
         <div className={styles.post}>
