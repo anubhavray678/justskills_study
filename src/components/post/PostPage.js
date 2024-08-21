@@ -92,8 +92,9 @@ function PostPage({ params }) {
       )}
       <div className={styles.content}>
         <br />
-        <Article />
-
+        <div className="mt-5">
+          <Article />
+        </div>
         <div className={styles.post}>
           {data && (
             <div
