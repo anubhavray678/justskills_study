@@ -92,7 +92,7 @@ function PostPage({ params }) {
       )}
       <div className={styles.content}>
         <br />
-        <div className="mt-5">
+        <div className="mt-3">
           <Article />
         </div>
         <div className={styles.post}>
