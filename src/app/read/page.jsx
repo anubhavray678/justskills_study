@@ -34,7 +34,7 @@ const BlogPage = ({ searchParams }) => {
 
         <meta
           property="og:image"
-          content="https://study.justskills.in/read.jpg"
+          content="https://study.justskills.in/read.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -49,7 +49,7 @@ const BlogPage = ({ searchParams }) => {
 
         <meta
           name="twitter:image"
-          content="https://study.justskills.in/read.jpg"
+          content="https://study.justskills.in/read.png"
         />
       </head>
 
