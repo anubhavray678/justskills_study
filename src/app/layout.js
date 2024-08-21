@@ -9,12 +9,6 @@ import HomeAd from "@/components/ads/HomeAd";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Justskills | Study",
-  description:
-    "Study different trending topics covering coding , technologies!",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
