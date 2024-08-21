@@ -5,6 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader"; // Import the spinner
 import MenuCategories from "../menuCategories/MenuCategories";
 import { Adsense } from "@ctrl/react-adsense";
 import FeedAdd from "../ads/FeedAdd";
+import SidebarAdd from "../ads/SidebarAdd";
 
 const getBlog = async () => {
   try {
@@ -136,7 +137,7 @@ const LatestBlog = () => {
             layout="autorelaxed"
             format="fluid"
           /> */}
-          <FeedAdd />
+          <SidebarAdd />
         </div>
       </div>
 
