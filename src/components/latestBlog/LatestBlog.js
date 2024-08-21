@@ -85,10 +85,10 @@ const LatestBlog = () => {
         LATEST ARTICLES
       </h2>
       <div className="flex flex-col md:flex-row gap-10">
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-2/3">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full ">
           {blogs.slice(0, displayedBlogsCount).map((blog) => (
             <>
-              {/* <FeedAdd /> */}
+              <FeedAdd />
               <div key={blog.id}>
                 <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm">
                   <ImageWithSpinner
@@ -129,16 +129,6 @@ const LatestBlog = () => {
           ))}
         </div>
         {/* <MenuCategories className="" /> */}
-        <div className="">
-          {/* <Adsense
-            client="ca-pub-3581583340976914"
-            slot="6170859620"
-            style={{ display: "block" }}
-            layout="autorelaxed"
-            format="fluid"
-          /> */}
-          <SidebarAdd />
-        </div>
       </div>
 
       {displayedBlogsCount < blogs.length && (
