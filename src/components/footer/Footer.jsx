@@ -109,34 +109,6 @@ const Footer = () => {
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
-                    href="https://study.justskills.in/read?cat=coding"
-                    class="hover:underline"
-                  >
-                    Coding
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="https://study.justskills.in/read?cat=project"
-                    class="hover:underline"
-                  >
-                    Project
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="https://study.justskills.in/read?cat=placement"
-                    class="hover:underline"
-                  >
-                    Placement
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a
                     href="https://justskills.in/course"
                     class="hover:underline"
                   >
@@ -157,6 +129,34 @@ const Footer = () => {
                     class="hover:underline"
                   >
                     Compresify
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a
+                    href="https://study.justskills.in/read?cat=coding"
+                    class="hover:underline"
+                  >
+                    Coding
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://study.justskills.in/read?cat=project"
+                    class="hover:underline"
+                  >
+                    Project
+                  </a>
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://study.justskills.in/read?cat=placement"
+                    class="hover:underline"
+                  >
+                    Placement
                   </a>
                 </li>
               </ul>
