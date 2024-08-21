@@ -15,6 +15,31 @@ const getData = async (slug) => {
   return res.json();
 };
 
+// export async function generateMetadata({ params, searchParams }, parent) {
+//   // read route params
+//   const id = params.id;
+
+//   // fetch data
+//   const post = await getData(params.slug);
+//   const title = post?.title;
+//   const description = post?.desc;
+//   const image = post.img;
+
+//   // optionally access and extend (rather than replace) parent metadata
+//   const previousImages = (await parent).openGraph?.images || [];
+
+//   return {
+//     title: title,
+//     description: description,
+//     openGraph: {
+//       images: image,
+//     },
+//     twitter: {
+//       images: image,
+//     },
+//   };
+// }
+
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
   const id = params.id;
@@ -27,28 +52,24 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
-  console.log(image);
 
   return {
     title: title,
     description: description,
     openGraph: {
-      images: image,
-    },
-    twitter: {
-      images: image,
+      images: [image],
     },
   };
 }
 
 const SinglePage = async ({ params }) => {
-  const post = await getData(params.slug);
-  const title = post?.title;
-  const description = post?.desc;
-  const image = post.img;
+  // const post = await getData(params.slug);
+  // const title = post?.title;
+  // const description = post?.desc;
+  // const image = post.img;
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>title</title>
         <meta property="og:title" content={`${title}`} />
         <meta property="og:description" content={`${description}`} />
@@ -57,7 +78,7 @@ const SinglePage = async ({ params }) => {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={`${image}`} />
-      </Head>
+      </Head> */}
       <PostPage params={params} />
       <Article />
       <LatestBlog />
