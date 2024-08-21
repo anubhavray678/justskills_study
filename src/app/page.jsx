@@ -38,7 +38,10 @@ export default function Home({ searchParams }) {
       <Featured />
       <Article />
       <FeaturedArticle page={page} />
+
       <div className={styles.content}>
+        <Article />
+
         <LatestBlog />
       </div>
     </div>
