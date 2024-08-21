@@ -128,7 +128,7 @@ const LatestBlog = () => {
         <div className="">
           {blogs.slice(0, displayedBlogsCount).map((blog) => (
             <>
-              <div key={blog.id}>
+              <div key={blog.id} className="mt-2 mb-2">
                 <FeedAdd />
               </div>
             </>
