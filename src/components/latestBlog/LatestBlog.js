@@ -128,7 +128,7 @@ const LatestBlog = () => {
           ))}
         </div>
         {/* <MenuCategories className="" /> */}
-        <div className="border bg-red-600 w-90">
+        <div className="">
           {/* <Adsense
             client="ca-pub-3581583340976914"
             slot="6170859620"
