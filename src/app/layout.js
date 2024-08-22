@@ -6,6 +6,7 @@ import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import HomeAd from "@/components/ads/HomeAd";
+import ScrollSlider from "@/components/slider/ScrollSlider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,11 @@ export default function RootLayout({ children }) {
               <div className="container">
                 <div className="wrapper">
                   <Navbar />
-                  <div className="pt-[100px]">{children}</div>
+                  <div className="pt-[100px]">
+                    <ScrollSlider />
+
+                    {children}
+                  </div>
                   <Footer />
                   {/* Google Ads */}
                   <HomeAd />
