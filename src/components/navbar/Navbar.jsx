@@ -5,6 +5,7 @@ import Link from "next/link";
 import AuthLinks from "../authLinks/AuthLinks";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import logo from "@/assets/logo.png";
+import ScrollSlider from "../slider/ScrollSlider";
 
 const Navbar = () => {
   return (
@@ -34,6 +35,7 @@ const Navbar = () => {
           <AuthLinks />
         </div>
       </div>
+      <ScrollSlider />
     </div>
   );
 };
