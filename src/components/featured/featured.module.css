@@ -91,11 +91,11 @@
     margin-top: 0px !important;
   }
   .postTitle {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
   }
   .post {
-    margin-top: 20px;
+    margin-top: 10px;
     display: grid !important;
     align-items: center;
     gap: 40px;
