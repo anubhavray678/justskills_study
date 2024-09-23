@@ -26,10 +26,10 @@ const Navbar = () => {
           <Link href="/read" className={styles.link}>
             Read
           </Link>
-          <Link href="https://justskills.in/contact" className={styles.link}>
+          <Link href="/contact" className={styles.link}>
             Contact
           </Link>
-          <Link href="https://justskills.in/about" className={styles.link}>
+          <Link href="/about" className={styles.link}>
             About
           </Link>
           <AuthLinks />
