@@ -47,7 +47,7 @@ function PostPage({ params }) {
       console.log("Web Share API not supported in this browser.");
     }
   };
-
+  const handleBookmark = () => {};
   return (
     <div className={styles.container}>
       {data && (
@@ -74,7 +74,7 @@ function PostPage({ params }) {
                 </div>
               </div>
               <div>
-                <CiBookmarkPlus />
+                <CiBookmarkPlus onClick={handleBookmark} />
                 <button
                   className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
                   onClick={handleShare}
