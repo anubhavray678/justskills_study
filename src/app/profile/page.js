@@ -38,6 +38,9 @@ export default function Profile() {
             </button>
           </div>
         </div>
+        <h2>Saved Articles</h2>
+        <hr />
+        {/* saved article */}
       </div>
     );
   }
