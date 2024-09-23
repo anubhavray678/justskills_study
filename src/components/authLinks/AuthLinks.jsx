@@ -34,6 +34,7 @@ const AuthLinks = () => {
           <div className={styles.responsiveMenu}>
             <Link href="https://justskills.in/about">About</Link>
             <Link href="/read">Read</Link>
+            <Link href="/category">Category</Link>
             <Link href="https://justskills.in/contact">Contact</Link>
             {status === "unauthenticated" ? (
               <Link href="/login" className={styles.link}>
@@ -68,6 +69,7 @@ const AuthLinks = () => {
           <div className={styles.responsiveMenu}>
             <Link href="https://justskills.in/about">About</Link>
             <Link href="/read">Read</Link>
+            <Link href="/category">Category</Link>
             <Link href="https://justskills.in/contact">Contact</Link>
             {status === "unauthenticated" ? (
               <Link href="/login" className={styles.link}>

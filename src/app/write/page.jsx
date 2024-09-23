@@ -152,11 +152,15 @@ const WritePage = () => {
               className="border"
               onChange={(e) => setCatSlug(e.target.value)}
             >
-              <option value="android">android</option>
+              <option value="data-structure">Data Structures</option>
+              <option value="algorithms">Algorithms</option>
+              <option value="system-design">System Design</option>
+              <option value="object-oriented-programming"> OOPS</option>
+              <option value="interview">Interview Experiences</option>
+              <option value="behaviour-interview">Behaviour Interview </option>
               <option value="emerging-tech">emerging-tech</option>
-              <option value="coding">coding</option>
+              <option value="programming">Programming</option>
               <option value="project">project</option>
-              <option value="travel">travel</option>
               <option value="placement">placement</option>
             </select>
             <div>

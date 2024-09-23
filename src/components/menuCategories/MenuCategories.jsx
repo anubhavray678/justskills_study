@@ -15,13 +15,78 @@ const MenuCategories = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-3 w-full items-center place-items-center">
-        <Link href="/read?cat=android">
+        <Link href="/read?cat=data-structure">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold ">Android</li>
+              <li className="text-xl font-sans font-semibold ">
+                Data Structures
+              </li>
               <li className="font-sans ">
-                Stay updated with the latest Android news, including new
-                releases, updates, tips, and tricks.
+                Explore fundamental data structures with real-world examples.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=algorithms">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold ">Algorithms</li>
+              <li className="font-sans ">
+                Learn essential algorithms with code snippets and explanations.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=system-design">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold ">
+                System Design
+              </li>
+              <li className="font-sans ">
+                Master designing scalable systems with practical system design
+                concepts.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=object-oriented-programming">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold ">OOPS</li>
+              <li className="font-sans ">
+                Understand object-oriented programming principles with clear use
+                cases.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=interview">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold ">
+                Interview Experiences
+              </li>
+              <li className="font-sans ">
+                Real-world interview stories and insights from successful
+                candidates.
+              </li>
+            </ul>
+            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
+          </div>
+        </Link>
+        <Link href="/read?cat=behaviour-interview">
+          <div className={styles.categoryItem}>
+            <ul>
+              <li className="text-xl font-sans font-semibold ">
+                Behaviour Interview
+              </li>
+              <li className="font-sans ">
+                Tips and guidance for acing behavioral interview questions.
               </li>
             </ul>
             <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
@@ -34,43 +99,30 @@ const MenuCategories = () => {
                 Emerging-tech
               </li>
               <li className="font-sans ">
-                Dive into the world of emerging technologies, covering
-                innovations and trends.
+                Discover the latest trends and innovations in technology.
               </li>
             </ul>
             <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
           </div>
         </Link>
-        <Link href="/read?cat=coding">
+        <Link href="/read?cat=programming">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold ">Coding</li>
+              <li className="text-xl font-sans font-semibold ">Programming</li>
               <li className="font-sans ">
-                Explore coding tutorials, best practices, new programming
-                languages, and developer tools.
+                Dive into programming tutorials, languages, and developer tools.
               </li>
             </ul>
             <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
           </div>
         </Link>
-        <Link href="/read?cat=travel">
-          <div className={styles.categoryItem}>
-            <ul>
-              <li className="text-xl font-sans font-semibold ">Travel</li>
-              <li className="font-sans ">
-                Discover travel guides, tips, and inspirational stories about
-                the most beautiful destinations.
-              </li>
-            </ul>
-            <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
-          </div>
-        </Link>
+
         <Link href="/read?cat=project">
           <div className={styles.categoryItem}>
             <ul>
               <li className="text-xl font-sans font-semibold ">Project</li>
               <li className="font-sans ">
-                A collection of projects in web dev showcasing practical
+                Hands-on project ideas and practical web development
                 applications.
               </li>
             </ul>
@@ -82,8 +134,8 @@ const MenuCategories = () => {
             <ul>
               <li className="text-xl font-sans font-semibold ">Placement</li>
               <li className="font-sans ">
-                Get insights and advice on job placements, including interview
-                experiences.
+                Expert advice and resources for cracking job placement
+                interviews.
               </li>
             </ul>
             <FaExternalLinkAlt className="text-indigo-700 scale-150 h-5 w-5" />
