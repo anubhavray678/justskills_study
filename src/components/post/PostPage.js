@@ -6,7 +6,7 @@ import Comments from "@/components/comments/Comments";
 import MenuCategories from "../menuCategories/MenuCategories";
 import { FaShareAlt } from "react-icons/fa";
 import Article from "../ads/inArticle";
-
+import { CiBookmarkPlus } from "react-icons/ci";
 const getData = async (slug) => {
   const res = await fetch(`https://justskills.in/api/posts/${slug}`, {
     cache: "no-store",
@@ -73,14 +73,16 @@ function PostPage({ params }) {
                   </span>
                 </div>
               </div>
-
-              <button
-                className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
-                onClick={handleShare}
-              >
-                <span>Share</span>
-                <FaShareAlt />
-              </button>
+              <div>
+                <CiBookmarkPlus />
+                <button
+                  className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
+                  onClick={handleShare}
+                >
+                  <span>Share</span>
+                  <FaShareAlt />
+                </button>
+              </div>
             </div>
           </div>
           {data.img && (
