@@ -56,13 +56,13 @@ function BottomNavBar() {
         break;
 
       case 1:
-        router.push("/community");
+        router.push("/category");
         break;
       case 2:
-        router.push("/bookings");
+        router.push("/jobs");
         break;
       case 3:
-        router.push("/account");
+        router.push("/profile");
         break;
       default:
         break;
@@ -148,7 +148,7 @@ function BottomNavBar() {
       />
 
       <BottomNavigationAction
-        label="Account"
+        label="Profile"
         value={3}
         icon={
           value === 3 ? (

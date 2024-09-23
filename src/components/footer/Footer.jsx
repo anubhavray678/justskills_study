@@ -11,7 +11,7 @@ import PrivacyPolicy from "../reusables/PrivacyPolicy";
 
 export default function Footer() {
   return (
-    <footer className="border-t dark:bg-secondary ">
+    <footer className="border-t dark:bg-secondary pt-10">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           {/* <div className="mb-6 md:mb-0">

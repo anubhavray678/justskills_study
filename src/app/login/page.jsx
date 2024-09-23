@@ -43,6 +43,7 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <p className="text-center text-2xl">Join Justskills.</p>
         <div className="flex flex-col items-center">
           <button
             className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5"
@@ -77,6 +78,18 @@ const LoginPage = () => {
             </div>
             <span className=" pl-5 pr-5">Sign Up with Google</span>
           </button>
+          <br />
+          <br />
+          <p className="p-5 text-gray-500 text-center">
+            Click “Sign up” to agree to Justskills’s{" "}
+            <span className="underline">
+              <br />
+              Terms of Service
+            </span>
+            &nbsp; and acknowledge that Justskills’s{" "}
+            <span className="underline">Privacy Policy</span>&nbsp; applies to
+            you.
+          </p>
         </div>
       </div>
     </div>
