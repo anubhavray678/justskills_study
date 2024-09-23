@@ -9,7 +9,7 @@ import ScrollSlider from "../slider/ScrollSlider";
 
 const Navbar = () => {
   return (
-    <div className=" fixed top-0 z-[9999] w-full left-0 pr-5 pl-5">
+    <div className=" fixed top-0 z-[9999] w-full left-0 pr-5 pl-2">
       <div className={styles.container}>
         <div className={styles.logo}>
           <Image src={logo} alt="" className="Applogo" />
