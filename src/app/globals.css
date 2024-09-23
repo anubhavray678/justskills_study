@@ -190,15 +190,16 @@ a {
 }
 .quill-editor blockquote p {
   display: inline;
+  
+}
+.quill-editor p{
   font-family: "Georgia", "Merriweather", serif;
   font-size: 20px;
   line-height: 1.7;
   color: #333;
   margin-bottom: 1.5em;
   text-align: justify;
-
 }
-
 
 .quill-editor ul {
   list-style-type: circle;
