@@ -190,6 +190,13 @@ a {
 }
 .quill-editor blockquote p {
   display: inline;
+  font-family: "Georgia", "Merriweather", serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5em;
+  text-align: justify;
+
 }
 
 
@@ -230,3 +237,6 @@ a {
 .quill-editor ol.custom-style li::marker {
   color: #ff5722; /* Custom marker color */
 }
+
+
+
