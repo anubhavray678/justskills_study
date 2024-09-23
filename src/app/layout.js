@@ -6,6 +6,7 @@ import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import HomeAd from "@/components/ads/HomeAd";
+import BottomNavBar from "@/components/BottomNavigation/BottomNavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
                   <Footer />
                   {/* Google Ads */}
                   <HomeAd />
+                  <BottomNavBar />
                 </div>
               </div>
             </ThemeProvider>
