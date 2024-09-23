@@ -24,7 +24,7 @@ const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `https://study.justskills.in/api/comments?postSlug=${postSlug}`,
+    `https://justskills.in/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 

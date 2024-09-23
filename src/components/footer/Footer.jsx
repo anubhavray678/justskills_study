@@ -113,7 +113,7 @@ export default function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
-                    href="https://study.justskills.in/read?cat=android"
+                    href="https://justskills.in/read?cat=android"
                     class="hover:underline"
                   >
                     Android
@@ -121,7 +121,7 @@ export default function Footer() {
                 </li>
                 <li class="mb-4">
                   <a
-                    href="https://study.justskills.in/read?cat=emerging-tech"
+                    href="https://justskills.in/read?cat=emerging-tech"
                     class="hover:underline"
                   >
                     Emerging-tech
@@ -129,7 +129,7 @@ export default function Footer() {
                 </li>
                 <li class="mb-4">
                   <a
-                    href="https://study.justskills.in/read?cat=coding"
+                    href="https://justskills.in/read?cat=coding"
                     class="hover:underline"
                   >
                     Coding
@@ -137,7 +137,7 @@ export default function Footer() {
                 </li>
                 <li class="mb-4">
                   <a
-                    href="https://study.justskills.in/read?cat=project"
+                    href="https://justskills.in/read?cat=project"
                     class="hover:underline"
                   >
                     Project
@@ -145,7 +145,7 @@ export default function Footer() {
                 </li>
                 <li class="mb-4">
                   <a
-                    href="https://study.justskills.in/read?cat=placement"
+                    href="https://justskills.in/read?cat=placement"
                     class="hover:underline"
                   >
                     Placement

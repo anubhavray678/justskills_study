@@ -4,7 +4,7 @@ import PostPage from "@/components/post/PostPage";
 import Head from "next/head";
 
 const getData = async (slug) => {
-  const res = await fetch(`https://study.justskills.in/api/posts/${slug}`, {
+  const res = await fetch(`https://justskills.in/api/posts/${slug}`, {
     cache: "no-store",
   });
 

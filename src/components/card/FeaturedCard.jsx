@@ -55,7 +55,7 @@ const FeaturedCard = ({ item }) => {
       )}
       <div className={styles.textContainer}>
         <div className="flex justify-between">
-          <Link href={`https://study.justskills.in/read?cat=${item.catSlug}`}>
+          <Link href={`https://justskills.in/read?cat=${item.catSlug}`}>
             <span className={styles.category}>{item.catSlug}</span>
           </Link>
           <span className={styles.categor}>{date + "-" + sendMonth}</span>

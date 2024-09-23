@@ -39,10 +39,7 @@ const BlogPage = ({ searchParams }) => {
           }
         />
 
-        <meta
-          property="og:image"
-          content="https://study.justskills.in/read.png"
-        />
+        <meta property="og:image" content="https://justskills.in/read.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:description"
@@ -54,10 +51,7 @@ const BlogPage = ({ searchParams }) => {
         />
         <meta property="twitter:title" content={metadata.title} />
 
-        <meta
-          name="twitter:image"
-          content="https://study.justskills.in/read.png"
-        />
+        <meta name="twitter:image" content="https://justskills.in/read.png" />
       </head>
       <Accordion
         type="single"

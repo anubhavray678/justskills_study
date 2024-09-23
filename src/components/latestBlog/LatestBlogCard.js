@@ -4,7 +4,7 @@ import Link from "next/link";
 const getBlog = async () => {
   try {
     // Replace 'http://api.example.com/posts' with the URL of your API server
-    const response = await fetch("https://study.justskills.in/api/latest");
+    const response = await fetch("https://justskills.in/api/latest");
 
     // Check if the response is successful
     if (!response.ok) {

@@ -2,7 +2,7 @@ import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
 
 // Base URL for blog posts
-const URL = "https://study.justskills.in/posts";
+const URL = "https://justskills.in/posts";
 
 export const GET = async (req) => {
   try {

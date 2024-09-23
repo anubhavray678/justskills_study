@@ -14,8 +14,8 @@ export const metadata = {
     "Justskills - Read different topics on coding, design, web dev, projects, placement and more.",
   description:
     "Study different trending topics covering coding , technologies!",
-  url: "https://study.justskills.in/",
-  metadataBase: new URL("https://study.justskills.in/"),
+  url: "https://justskills.in/",
+  metadataBase: new URL("https://justskills.in/"),
   alternates: {
     canonical: "/",
     languages: {
@@ -28,8 +28,8 @@ export const metadata = {
       "Justskills | Read different topics on coding, design, web dev, projects, placement and more.",
     description:
       "Study different trending topics covering coding , technologies!",
-    url: "https://study.justskills.in/",
-    metadataBase: new URL("https://study.justskills.in/"),
+    url: "https://justskills.in/",
+    metadataBase: new URL("https://justskills.in/"),
     images: "/cover.png",
   },
 };
@@ -80,7 +80,7 @@ export default function Home({ searchParams }) {
                   </span>
                 </p>
                 <a
-                  href="https://study.justskills.in/"
+                  href="https://justskills.in/"
                   target="blank"
                   className="font-semibold tracking-wide underline-offset-4 text-indigo-500 dark:text-white border-white border-2 p-2 rounded-lg hover:bg-indigo-400"
                 >
