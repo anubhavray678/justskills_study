@@ -73,8 +73,11 @@ function PostPage({ params }) {
                   </span>
                 </div>
               </div>
-              <div>
-                <CiBookmarkPlus onClick={handleBookmark} />
+              <div className="flex gap-2">
+                <CiBookmarkPlus
+                  onClick={handleBookmark}
+                  className=" scale-150"
+                />
                 <button
                   className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
                   onClick={handleShare}
