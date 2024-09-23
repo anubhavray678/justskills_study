@@ -202,9 +202,12 @@ a {
 }
 
 .quill-editor ul {
-  list-style-type: circle;
-  border: 2px solid rgb(212, 163, 250);
-  background-color: rgb(213, 203, 238);
+  list-style-type: square;
+  padding-left: 20px;
+  margin: 1em 0;
+  border-left: 4px solid rgb(100, 85, 210);
+  background-color: transparent;
+  color: #444;
 }
 .quill-editor li {
   margin: 5px;
