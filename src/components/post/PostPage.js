@@ -24,7 +24,7 @@ const getData = async (slug) => {
 function PostPage({ params }) {
   const { slug } = params;
   const [data, setData] = useState(null);
-  const { data: session } = useSession();
+  const { status } = useSession();
   const [isBookmarked, setIsBookmarked] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
@@ -51,8 +51,59 @@ function PostPage({ params }) {
     }
   };
 
-  const handleBookmark = async () => {};
-  const handleRemoveBookmark = async () => {};
+  const handleBookmark = async () => {
+    if (status === "unauthenticated") {
+      alert("You must be logged in to bookmark this post.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/bookmark`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ postId: data.id }),
+      });
+
+      if (response.ok) {
+        setIsBookmarked(true);
+        console.log("Bookmark added successfully!");
+      } else {
+        const result = await response.json();
+        console.error("Failed to add bookmark:", result.message);
+      }
+    } catch (error) {
+      console.error("Error bookmarking the post:", error);
+    }
+  };
+
+  const handleRemoveBookmark = async () => {
+    if (status === "unauthenticated") {
+      alert("You must be logged in to remove this bookmark.");
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/bookmark`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ postId: data.id }),
+      });
+
+      if (response.ok) {
+        setIsBookmarked(false);
+        console.log("Bookmark removed successfully!");
+      } else {
+        const result = await response.json();
+        console.error("Failed to remove bookmark:", result.message);
+      }
+    } catch (error) {
+      console.error("Error removing the bookmark:", error);
+    }
+  };
 
   return (
     <div className={styles.container}>
