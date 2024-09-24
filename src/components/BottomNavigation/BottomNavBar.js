@@ -4,24 +4,22 @@ import React, { useState, useEffect } from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
-import { GoHome } from "react-icons/go";
-import { GoHomeFill } from "react-icons/go";
-
-import { BsPerson } from "react-icons/bs";
-import { BsPersonFill } from "react-icons/bs";
-import { IoChatbox } from "react-icons/io5";
-import { IoChatboxOutline } from "react-icons/io5";
+import { GoHome, GoHomeFill } from "react-icons/go";
+import { BsPerson, BsPersonFill } from "react-icons/bs";
+import { IoChatbox, IoChatboxOutline } from "react-icons/io5";
 import WorkIcon from "@mui/icons-material/Work";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
+
 function BottomNavBar() {
   const router = useRouter();
   const pathname = usePathname();
   const [value, setValue] = useState(getPageIndex(pathname));
   const [isMobile, setIsMobile] = useState(false);
+  const [visible, setVisible] = useState(true); // State to control visibility
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const { theme } = useContext(ThemeContext);
   const isDarkMode = theme === "dark" ? true : false;
@@ -34,6 +32,29 @@ function BottomNavBar() {
       )
     );
   }, []);
+
+  // Track scroll direction to hide/show the BottomNavBar
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > lastScrollY && scrollY > 100) {
+        // Scrolling up - hide navbar
+        setVisible(false);
+      } else {
+        // Scrolling down - show navbar
+        setVisible(true);
+      }
+
+      setLastScrollY(scrollY); // Update last scroll position
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   function getPageIndex(route) {
     switch (route) {
@@ -56,7 +77,6 @@ function BottomNavBar() {
       case 0:
         router.push("/");
         break;
-
       case 1:
         router.push("/category");
         break;
@@ -85,6 +105,8 @@ function BottomNavBar() {
         zIndex: 999,
         backgroundColor: isDarkMode ? "#0f172a" : "#fff",
         boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
+        transform: visible ? "translateY(0)" : "translateY(100%)", // Slide down when hidden
+        transition: "transform 0.3s ease-in-out", // Smooth transition
         "& .MuiBottomNavigationAction-root": {
           fontSize: "1.7rem",
         },

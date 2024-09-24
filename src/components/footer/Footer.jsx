@@ -24,37 +24,12 @@ export default function Footer() {
             </a>
           </div> */}
           <div className="grid sm:flex justify-around justify-items-center gap-8 sm:gap-6 sm:grid-cols-2 w-full text-center">
-            <div>
+            {/* <div>
               <h2 className="mb-6 text-sm font-semibold uppercase ">
                 Resources
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a
-                    href="https://justskills.in/course"
-                    class="hover:underline"
-                  >
-                    Course
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="https://justskills.in/jobsearch"
-                    class="hover:underline"
-                  >
-                    JobSearch
-                  </a>
-                </li>
-                <li class="mb-4">
-                  <a
-                    href="https://compresify.justskills.in"
-                    class="hover:underline"
-                  >
-                    Compresify
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium"></ul>
+            </div> */}
 
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase ">Legal</h2>
@@ -82,26 +57,45 @@ export default function Footer() {
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase ">Company</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
+                <li className="mb-4">
                   <a
                     href="https://justskills.in/about"
-                    class=" hover:underline"
+                    className=" hover:underline"
                   >
                     About
                   </a>
                 </li>
-                <li class="mb-4"></li>
-                <li class="mb-4">
+                <li className="mb-4"></li>
+                <li className="mb-4">
                   <a
                     href="https://justskills.in/contact"
-                    class="hover:underline"
+                    className="hover:underline"
                   >
                     Contact
                   </a>
                 </li>
-                <li class="mb-4">
-                  <a href="https://justskills.in/read" class="hover:underline">
+                <li className="mb-4">
+                  <a
+                    href="https://justskills.in/read"
+                    className="hover:underline"
+                  >
                     Read
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://justskills.in/jobs"
+                    className="hover:underline"
+                  >
+                    Jobs
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://compresify.justskills.in"
+                    className="hover:underline"
+                  >
+                    Compresify
                   </a>
                 </li>
               </ul>
@@ -110,45 +104,81 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase ">
                 Category
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
+
+              <ul className="text-gray-500 dark:text-gray-400 font-medium ">
+                <li className="mb-4">
                   <a
-                    href="https://justskills.in/read?cat=android"
-                    class="hover:underline"
+                    href="https://justskills.in/read?cat=data-structure"
+                    className="hover:underline"
                   >
-                    Android
+                    Data Structures
                   </a>
                 </li>
-                <li class="mb-4">
+                <li className="mb-4">
                   <a
                     href="https://justskills.in/read?cat=emerging-tech"
-                    class="hover:underline"
+                    className="hover:underline"
                   >
                     Emerging-tech
                   </a>
                 </li>
-                <li class="mb-4">
+                <li className="mb-4">
                   <a
-                    href="https://justskills.in/read?cat=coding"
-                    class="hover:underline"
+                    href="https://justskills.in/read?cat=programming"
+                    className="hover:underline"
                   >
-                    Coding
+                    Programming
                   </a>
                 </li>
-                <li class="mb-4">
+                <li className="mb-4">
                   <a
                     href="https://justskills.in/read?cat=project"
-                    class="hover:underline"
+                    className="hover:underline"
                   >
                     Project
                   </a>
                 </li>
-                <li class="mb-4">
+                <li className="mb-4">
                   <a
                     href="https://justskills.in/read?cat=placement"
-                    class="hover:underline"
+                    className="hover:underline"
                   >
                     Placement
+                  </a>
+                </li>
+              </ul>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <a
+                    href="https://justskills.in/read?cat=algorithms"
+                    className="hover:underline"
+                  >
+                    Algorithms
+                  </a>
+                </li>
+
+                <li className="mb-4">
+                  <a
+                    href="https://justskills.in/read?cat=interview"
+                    className="hover:underline"
+                  >
+                    Interview
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://justskills.in/read?cat=object-oriented-programming"
+                    className="hover:underline"
+                  >
+                    OOPS
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://justskills.in/read?cat=system-design"
+                    className="hover:underline"
+                  >
+                    System design
                   </a>
                 </li>
               </ul>
