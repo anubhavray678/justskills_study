@@ -47,7 +47,7 @@ model User {
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
-  bookmarks     Bookmark[]
+  bookmark     Bookmark[]
 }
 
 model VerificationToken {
@@ -79,7 +79,7 @@ model Post {
   userEmail String
   user      User      @relation(fields: [userEmail], references: [email])
   comments  Comment[]
-  bookmarks Bookmark[]
+  bookmark  Bookmark[]
 }
 
 model Comment {
