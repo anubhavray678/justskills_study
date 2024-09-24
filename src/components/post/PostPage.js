@@ -51,46 +51,8 @@ function PostPage({ params }) {
     }
   };
 
-  const handleBookmark = async () => {
-    if (!session?.user) {
-      console.log("User not authenticated");
-      return;
-    }
-
-    try {
-      if (isBookmarked) {
-        // Remove bookmark
-        const res = await fetch(`https://justskills.in/api/bookmarks`, {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ postId: data.id }),
-        });
-
-        if (res.ok) {
-          setIsBookmarked(false);
-          console.log("Bookmark removed");
-        }
-      } else {
-        // Add bookmark
-        const res = await fetch(`https://justskills.in/api/bookmarks`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ postId: data.id }),
-        });
-
-        if (res.ok) {
-          setIsBookmarked(true);
-          console.log("Bookmark added");
-        }
-      }
-    } catch (error) {
-      console.error("Error updating bookmark:", error);
-    }
-  };
+  const handleBookmark = async () => {};
+  const handleRemoveBookmark = async () => {};
 
   return (
     <div className={styles.container}>
