@@ -38,15 +38,16 @@ model Session {
 }
 
 model User {
-  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  id            String     @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
-  email         String    @unique
+  email         String     @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
+  bookmarks     Bookmark[] // Add relation to Bookmark
 }
 
 model VerificationToken {
@@ -78,6 +79,7 @@ model Post {
   userEmail String
   user      User      @relation(fields: [userEmail], references: [email])
   comments  Comment[]
+  bookmarks Bookmark[] // Add relation to Bookmark
 }
 
 model Comment {
@@ -88,4 +90,16 @@ model Comment {
   user      User     @relation(fields: [userEmail], references: [email])
   postSlug  String
   post      Post     @relation(fields: [postSlug], references: [slug])
+}
+
+// New Bookmark model
+model Bookmark {
+  id        String   @id @default(cuid()) @map("_id")
+  createdAt DateTime @default(now())
+  userId    String
+  postId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, postId]) // Ensure each user can bookmark a post only once
 }

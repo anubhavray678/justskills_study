@@ -7,6 +7,7 @@ import MenuCategories from "../menuCategories/MenuCategories";
 import { FaShareAlt } from "react-icons/fa";
 import Article from "../ads/inArticle";
 import { CiBookmarkPlus } from "react-icons/ci";
+import { useSession } from "next-auth/react";
 const getData = async (slug) => {
   const res = await fetch(`https://justskills.in/api/posts/${slug}`, {
     cache: "no-store",
@@ -22,7 +23,7 @@ const getData = async (slug) => {
 function PostPage({ params }) {
   const { slug } = params;
   const [data, setData] = useState(null);
-
+  const { data: session } = useSession();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,7 +48,48 @@ function PostPage({ params }) {
       console.log("Web Share API not supported in this browser.");
     }
   };
-  const handleBookmark = () => {};
+
+  const handleBookmark = async () => {
+    if (!session?.user) {
+      console.log("User not authenticated");
+      return;
+    }
+
+    try {
+      if (isBookmarked) {
+        // Remove bookmark
+        const res = await fetch(`https://justskills.in/api/bookmarks`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ postId: data.id }),
+        });
+
+        if (res.ok) {
+          setIsBookmarked(false);
+          console.log("Bookmark removed");
+        }
+      } else {
+        // Add bookmark
+        const res = await fetch(`https://justskills.in/api/bookmarks`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ postId: data.id }),
+        });
+
+        if (res.ok) {
+          setIsBookmarked(true);
+          console.log("Bookmark added");
+        }
+      }
+    } catch (error) {
+      console.error("Error updating bookmark:", error);
+    }
+  };
+
   return (
     <div className={styles.container}>
       {data && (
