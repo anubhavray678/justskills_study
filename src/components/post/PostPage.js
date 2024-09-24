@@ -284,6 +284,7 @@ function PostPage({ params }) {
       }
     } catch (error) {
       console.error("Error bookmarking the post:", error);
+      console.error(error.message);
     }
   };
 

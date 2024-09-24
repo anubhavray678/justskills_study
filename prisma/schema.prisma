@@ -47,7 +47,7 @@ model User {
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
-  bookmarks Bookmark[]
+  bookmarks     Bookmark[]
 }
 
 model VerificationToken {
