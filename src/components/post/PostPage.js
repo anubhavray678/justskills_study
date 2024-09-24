@@ -58,7 +58,7 @@ function PostPage({ params }) {
     }
 
     try {
-      const response = await fetch(`/api/bookmark`, {
+      const response = await fetch(`/api/bookmarks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function PostPage({ params }) {
     }
 
     try {
-      const response = await fetch(`/api/bookmark`, {
+      const response = await fetch(`/api/bookmarks`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
