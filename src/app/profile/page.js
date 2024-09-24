@@ -16,7 +16,7 @@ export default function Profile() {
 
   if (status === "authenticated" && data && data.user) {
     return (
-      <div>
+      <div className="h-[100vh]">
         <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
@@ -38,7 +38,6 @@ export default function Profile() {
             </button>
           </div>
         </div>
-
       </div>
     );
   }
