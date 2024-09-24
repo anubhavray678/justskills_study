@@ -24,7 +24,7 @@ const getData = async (slug) => {
 function PostPage({ params }) {
   const { slug } = params;
   const [data, setData] = useState(null);
-  const { status } = useSession();
+  const { session } = useSession();
   const [isBookmarked, setIsBookmarked] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
