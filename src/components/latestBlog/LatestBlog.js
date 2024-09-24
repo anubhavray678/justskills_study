@@ -87,7 +87,7 @@ const LatestBlog = () => {
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-2/3">
           {blogs.slice(0, displayedBlogsCount).map((blog) => (
             <div key={blog.id}>
-              <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm">
+              <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm">
                 <ImageWithSpinner
                   src={blog.img}
                   alt={blog.title}
@@ -96,7 +96,7 @@ const LatestBlog = () => {
 
                 <div className="p-4 sm:p-6">
                   <Link href={`/posts/${blog.slug}`} passHref>
-                    <h3 className="text-lg font-medium text-gray-900 hover:underline line-clamp-2">
+                    <h3 className="text-lg font-medium hover:underline line-clamp-2">
                       {blog.title}
                     </h3>
                   </Link>
