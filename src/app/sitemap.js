@@ -28,6 +28,31 @@ export default async function Sitemap() {
         priority: 1,
       },
       {
+        url: "https://justskills.in/about",
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+      },
+      {
+        url: "https://justskills.in/contact",
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.5,
+      },
+      {
+        url: "https://justskills.in/read",
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        // priority: 0.5,
+      },
+
+      {
+        url: "https://justskills.in/jobs",
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        // priority: 0.5,
+      },
+      {
         url: "https://justskills.in/read?cat=android",
         lastModified: new Date(),
         changeFrequency: "daily",

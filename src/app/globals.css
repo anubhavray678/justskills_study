@@ -216,12 +216,14 @@ a {
 }
 
 .quill-editor ol {
-  list-style-type: decimal; /* Use decimal numbers */
-  margin-left: 20px; /* Add space to the left */
-  padding-left: 0; /* Remove default padding */
-  color: #333; /* Text color */
-  font-size: 16px; /* Font size */
-  line-height: 1.6; /* Line height */
+  list-style-type: decimal; 
+  font-family: "Georgia", "Merriweather", serif;
+  /* margin-bottom: 1.5em; */
+  margin-left: 20px;
+  text-align: justify;
+  padding-left: 0; 
+  font-size: 18px; 
+  line-height: 1.6; 
 }
 
 .quill-editor ol li {
