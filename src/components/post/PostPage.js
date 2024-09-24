@@ -73,7 +73,7 @@ function PostPage({ params }) {
                   </span>
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 justify-center items-center">
                 <CiBookmarkPlus
                   onClick={handleBookmark}
                   className=" scale-150"

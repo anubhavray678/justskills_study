@@ -9,20 +9,22 @@ import { GoHomeFill } from "react-icons/go";
 
 import { BsPerson } from "react-icons/bs";
 import { BsPersonFill } from "react-icons/bs";
-import { TbClipboardText } from "react-icons/tb";
-import { FaClipboard } from "react-icons/fa";
 import { IoChatbox } from "react-icons/io5";
 import { IoChatboxOutline } from "react-icons/io5";
 import WorkIcon from "@mui/icons-material/Work";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
-
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 function BottomNavBar() {
   const router = useRouter();
   const pathname = usePathname();
   const [value, setValue] = useState(getPageIndex(pathname));
   const [isMobile, setIsMobile] = useState(false);
+
+  const { theme } = useContext(ThemeContext);
+  const isDarkMode = theme === "dark" ? true : false;
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
@@ -81,8 +83,7 @@ function BottomNavBar() {
         bottom: "0px",
         left: 0,
         zIndex: 999,
-        // backgroundColor: "#FFEFEB",
-        backgroundColor: "#fff",
+        backgroundColor: isDarkMode ? "#0f172a" : "#fff",
         boxShadow: "0px -1px 10px 0 rgba(0, 0, 0, 20%)",
         "& .MuiBottomNavigationAction-root": {
           fontSize: "1.7rem",
