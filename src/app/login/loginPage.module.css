@@ -6,7 +6,7 @@
 }
 
 .wrapper {
-  background-color: white;
+  /* background-color: white; */
   padding: 150px 200px;
   display: flex;
   flex-direction: column;
