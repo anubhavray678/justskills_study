@@ -94,10 +94,8 @@ model Comment {
 model Bookmark {
   id        String   @id @default(cuid()) @map("_id")
   createdAt DateTime @default(now())
-  userId    String
-  postId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
-
-  @@unique([userId, postId]) 
+  userEmail String
+  user      User     @relation(fields: [userEmail], references: [email])
+  postSlug  String
+  post      Post     @relation(fields: [postSlug], references: [slug]) 
 }

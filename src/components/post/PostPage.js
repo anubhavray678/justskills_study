@@ -197,6 +197,8 @@
 
 // export default PostPage;
 
+"use client";
+
 import { useEffect, useState } from "react";
 import styles from "@/app/posts/[slug]/singlePage.module.css";
 import Image from "next/image";
@@ -231,8 +233,8 @@ function PostPage({ params }) {
       try {
         const result = await getData(slug);
         setData(result);
-        // Check if the post is bookmarked (assuming `bookmarks` contains an array of bookmarked post IDs)
-        if (session?.user?.bookmarks?.includes(result.id)) {
+        // Check if the post is bookmarked based on postSlug in session data
+        if (session?.user?.bookmarks?.includes(result.slug)) {
           setIsBookmarked(true);
         }
       } catch (error) {
@@ -263,12 +265,12 @@ function PostPage({ params }) {
     }
 
     try {
-      const response = await fetch(`/api/bookmarks`, {
+      const response = await fetch(`/api/bookmark`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ postId: data.id }),
+        body: JSON.stringify({ postSlug: data.slug }), // Use postSlug instead of postId
       });
 
       if (response.ok) {
@@ -284,7 +286,6 @@ function PostPage({ params }) {
       }
     } catch (error) {
       console.error("Error bookmarking the post:", error);
-      console.error(error.message);
     }
   };
 
@@ -295,12 +296,12 @@ function PostPage({ params }) {
     }
 
     try {
-      const response = await fetch(`/api/bookmarks`, {
+      const response = await fetch(`/api/bookmark`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ postId: data.id }),
+        body: JSON.stringify({ postSlug: data.slug }), // Use postSlug instead of postId
       });
 
       if (response.ok) {
