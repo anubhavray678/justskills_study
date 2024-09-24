@@ -52,18 +52,19 @@ function PostPage({ params }) {
   };
 
   const handleBookmark = async () => {
-    if (status === "unauthenticated") {
+    if (!session) {
       alert("You must be logged in to bookmark this post.");
       return;
     }
 
     try {
-      const response = await fetch(`/api/bookmarks`, {
+      // Sending a POST request to add the bookmark
+      const response = await fetch(`/api/bookmark`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ postId: data.id }),
+        body: JSON.stringify({ postId: data.id }), // Passing the post ID to the API
       });
 
       if (response.ok) {
@@ -71,7 +72,11 @@ function PostPage({ params }) {
         console.log("Bookmark added successfully!");
       } else {
         const result = await response.json();
-        console.error("Failed to add bookmark:", result.message);
+        if (result.message === "Bookmark already exists!") {
+          console.log("This post is already bookmarked.");
+        } else {
+          console.error("Failed to add bookmark:", result.message);
+        }
       }
     } catch (error) {
       console.error("Error bookmarking the post:", error);
@@ -79,18 +84,19 @@ function PostPage({ params }) {
   };
 
   const handleRemoveBookmark = async () => {
-    if (status === "unauthenticated") {
+    if (!session) {
       alert("You must be logged in to remove this bookmark.");
       return;
     }
 
     try {
-      const response = await fetch(`/api/bookmarks`, {
+      // Sending a DELETE request to remove the bookmark
+      const response = await fetch(`/api/bookmark`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ postId: data.id }),
+        body: JSON.stringify({ postId: data.id }), // Passing the post ID to the API
       });
 
       if (response.ok) {
@@ -98,7 +104,11 @@ function PostPage({ params }) {
         console.log("Bookmark removed successfully!");
       } else {
         const result = await response.json();
-        console.error("Failed to remove bookmark:", result.message);
+        if (result.message === "Bookmark not found!") {
+          console.log("This post is not bookmarked.");
+        } else {
+          console.error("Failed to remove bookmark:", result.message);
+        }
       }
     } catch (error) {
       console.error("Error removing the bookmark:", error);

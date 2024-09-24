@@ -99,5 +99,5 @@ model Bookmark {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
 
-  @@unique([userId, postId]) // Ensure each user can bookmark a post only once
+  @@unique([userId, postId]) 
 }

@@ -7,8 +7,9 @@ export const GET = async (req) => {
   const session = await getAuthSession();
 
   if (!session) {
-    return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
+    return NextResponse.json(
+      { message: "Not Authenticated!" },
+      { status: 401 }
     );
   }
 
@@ -20,11 +21,12 @@ export const GET = async (req) => {
       },
     });
 
-    return new NextResponse(JSON.stringify({ bookmarks }, { status: 200 }));
+    return NextResponse.json({ bookmarks }, { status: 200 });
   } catch (err) {
-    console.log(err);
-    return new NextResponse(
-      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    console.error(err);
+    return NextResponse.json(
+      { message: "Something went wrong!" },
+      { status: 500 }
     );
   }
 };
@@ -34,8 +36,9 @@ export const POST = async (req) => {
   const session = await getAuthSession();
 
   if (!session) {
-    return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
+    return NextResponse.json(
+      { message: "Not Authenticated!" },
+      { status: 401 }
     );
   }
 
@@ -53,8 +56,9 @@ export const POST = async (req) => {
     });
 
     if (existingBookmark) {
-      return new NextResponse(
-        JSON.stringify({ message: "Bookmark already exists!" }, { status: 400 })
+      return NextResponse.json(
+        { message: "Bookmark already exists!" },
+        { status: 400 }
       );
     }
 
@@ -65,11 +69,12 @@ export const POST = async (req) => {
       },
     });
 
-    return new NextResponse(JSON.stringify(bookmark, { status: 201 }));
+    return NextResponse.json(bookmark, { status: 201 });
   } catch (err) {
-    console.log(err);
-    return new NextResponse(
-      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    console.error(err);
+    return NextResponse.json(
+      { message: "Something went wrong!" },
+      { status: 500 }
     );
   }
 };
@@ -79,8 +84,9 @@ export const DELETE = async (req) => {
   const session = await getAuthSession();
 
   if (!session) {
-    return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
+    return NextResponse.json(
+      { message: "Not Authenticated!" },
+      { status: 401 }
     );
   }
 
@@ -97,8 +103,9 @@ export const DELETE = async (req) => {
     });
 
     if (!bookmark) {
-      return new NextResponse(
-        JSON.stringify({ message: "Bookmark not found!" }, { status: 404 })
+      return NextResponse.json(
+        { message: "Bookmark not found!" },
+        { status: 404 }
       );
     }
 
@@ -111,16 +118,15 @@ export const DELETE = async (req) => {
       },
     });
 
-    return new NextResponse(
-      JSON.stringify(
-        { message: "Bookmark removed successfully!" },
-        { status: 200 }
-      )
+    return NextResponse.json(
+      { message: "Bookmark removed successfully!" },
+      { status: 200 }
     );
   } catch (err) {
-    console.log(err);
-    return new NextResponse(
-      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    console.error(err);
+    return NextResponse.json(
+      { message: "Something went wrong!" },
+      { status: 500 }
     );
   }
 };
