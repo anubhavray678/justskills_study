@@ -38,13 +38,10 @@ export default function Profile() {
             </button>
           </div>
         </div>
-        <h2>Saved Articles</h2>
-        <hr />
-        {/* saved article */}
+
       </div>
     );
   }
 
-  // Optionally, you can return a loading state while checking the session status
   return null;
 }
