@@ -81,7 +81,7 @@ export default function Profile() {
                 href={`/posts/${post.postSlug}`}
                 className="block"
               >
-                <div className="flex items-center justify-between bg-white border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300 pl-0 sm:pl-10 pr-0 sm:pr-10">
+                <div className="flex items-center justify-between bg-white border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300 pl-4 sm:pl-20 pr-4 sm:pr-20">
                   {/* Title on the left */}
                   <div className="flex-grow">
                     <h3 className="text-xl font-semibold text-gray-800">
