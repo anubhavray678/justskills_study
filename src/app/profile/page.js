@@ -90,9 +90,9 @@ export default function Profile() {
                   {/* Image on the right */}
                   <div className="ml-4">
                     <ImageWithSpinner
-                      src={blog.postImg}
-                      alt={blog.postTitle}
-                      url={blog.slug}
+                      src={post.postImg}
+                      alt={post.postTitle}
+                      url={post.slug}
                     />
                     {/* <img
                       src={post.postImg}
