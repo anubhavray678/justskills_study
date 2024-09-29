@@ -85,12 +85,12 @@ export default function Profile() {
                     <h3 className="text-xl font-semibold">{post.postTitle}</h3>
                   </div>
                   {/* Image on the right */}
-                  <div className="ml-4 w-10 h-10">
+                  <div className="ml-4">
                     <ImageWithSpinner
                       src={post.postImg}
                       alt={post.postTitle}
                       url={post.slug}
-                      className=" w-10 h-10 object-cover rounded-md"
+                      className=" w-10 h-2 object-cover rounded-md"
                     />
                   </div>
                 </div>
