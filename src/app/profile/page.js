@@ -11,7 +11,7 @@ export default function Profile() {
   const router = useRouter();
   const [savedPosts, setSavedPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [displayedBlogsCount, setDisplayedBlogsCount] = useState(9);
+  const [displayedBlogsCount, setDisplayedBlogsCount] = useState(6);
 
   // Fetch saved posts when the component mounts
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Profile() {
 
   if (status === "authenticated" && data && data.user) {
     return (
-      <div className="h-[100vh]">
+      <div className="h-full">
         <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
