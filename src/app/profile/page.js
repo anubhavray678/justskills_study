@@ -121,7 +121,7 @@ const ImageWithSpinner = ({ src, alt, url }) => {
   const [imageLoading, setImageLoading] = useState(true);
 
   return (
-    <div className="relative h-56 w-full">
+    <div className="relative w-full">
       {imageLoading && (
         <div className="absolute inset-0 flex justify-center items-center">
           <ClipLoader size={50} color={"#8a4dfa"} loading={imageLoading} />
