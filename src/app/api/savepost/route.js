@@ -11,17 +11,15 @@ export const POST = async (req) => {
     );
   }
 
-  // const { postSlug } = req.body;
-  const postSlug = await req.json();
+  const { postSlug, postTitle, postImg } = await req.json();
   try {
-    // const savedPost = await prisma.savedPost.create({
-    //   data: {
-    //     userEmail: session.user.email,
-    //     postSlug,
-    //   },
-    // });
     const savedPost = await prisma.savedPost.create({
-      data: { ...postSlug, userEmail: session.user.email },
+      data: {
+        postSlug,
+        postTitle,
+        postImg,
+        userEmail: session.user.email,
+      },
     });
     return new NextResponse(JSON.stringify(savedPost), { status: 200 });
   } catch (error) {
