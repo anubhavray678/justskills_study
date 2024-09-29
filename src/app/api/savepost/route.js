@@ -1,33 +1,44 @@
+import { getAuthSession } from "@/utils/auth";
 import prisma from "@/utils/connect";
-import { getSession } from "next-auth/react";
+import { NextResponse } from "next/server";
 
-export const POST = async (req, res) => {
-  const session = await getSession({ req });
+export const POST = async (req) => {
+  const session = await getAuthSession();
 
   if (!session) {
-    return res.status(401).json({ error: "Unauthorized" });
+    return new NextResponse(
+      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
+    );
   }
 
-  const { postSlug } = req.body;
-
+  // const { postSlug } = req.body;
+  const postSlug = await req.json();
   try {
+    // const savedPost = await prisma.savedPost.create({
+    //   data: {
+    //     userEmail: session.user.email,
+    //     postSlug,
+    //   },
+    // });
     const savedPost = await prisma.savedPost.create({
-      data: {
-        userEmail: session.user.email,
-        postSlug,
-      },
+      data: { ...postSlug, userEmail: session.user.email },
     });
-    res.status(201).json(savedPost);
+    return new NextResponse(JSON.stringify(savedPost), { status: 200 });
   } catch (error) {
-    res.status(500).json({ error: "Unable to save post" });
+    console.error(error);
+    return new NextResponse(
+      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    );
   }
 };
 
-export const GET = async (req, res) => {
-  const session = await getSession({ req });
+export const GET = async (req) => {
+  const session = await getAuthSession();
 
   if (!session) {
-    return res.status(401).json({ error: "Unauthorized" });
+    return new NextResponse(
+      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
+    );
   }
 
   try {
@@ -35,8 +46,10 @@ export const GET = async (req, res) => {
       where: { userEmail: session.user.email },
       include: { post: true },
     });
-    res.status(200).json(savedPosts);
+    return new NextResponse(JSON.stringify(savedPosts), { status: 200 });
   } catch (error) {
-    res.status(500).json({ error: "Unable to retrieve saved posts" });
+    return new NextResponse(
+      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    );
   }
 };
