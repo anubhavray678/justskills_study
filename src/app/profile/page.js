@@ -82,12 +82,10 @@ export default function Profile() {
                 <div className="flex items-center justify-between border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300 pl-4 sm:pl-20 pr-4 sm:pr-20">
                   {/* Title on the left */}
                   <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-800">
-                      {post.postTitle}
-                    </h3>
+                    <h3 className="text-xl font-semibold">{post.postTitle}</h3>
                   </div>
                   {/* Image on the right */}
-                  <div className="ml-4">
+                  <div className="ml-4 w-10 h-10">
                     <ImageWithSpinner
                       src={post.postImg}
                       alt={post.postTitle}
