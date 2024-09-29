@@ -131,7 +131,7 @@ const ImageWithSpinner = ({ src, alt, url }) => {
         <img
           src={src}
           alt={alt}
-          className={`h-56 w-full object-fill transition-opacity duration-500 ${
+          className={` h-28 w-full object-fill transition-opacity duration-500 ${
             imageLoading ? "opacity-0" : "opacity-100"
           }`}
           onLoad={() => setImageLoading(false)}
