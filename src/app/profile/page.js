@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
-
+import axios from "axios";
 export default function Profile() {
   const { status, data } = useSession();
   const router = useRouter();
@@ -107,7 +107,7 @@ export default function Profile() {
             <p>No saved posts found.</p>
           )}
         </div>
-        {displayedBlogsCount < blogs.length && (
+        {displayedBlogsCount < savedPosts.length && (
           <div className="text-center mt-4">
             <button
               onClick={loadMore}
