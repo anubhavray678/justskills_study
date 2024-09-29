@@ -85,7 +85,6 @@ export default function Profile() {
                     <h3 className="text-xl font-semibold text-gray-800">
                       {post.postTitle}
                     </h3>
-                    <p className="text-gray-600">Slug: {post.postSlug}</p>
                   </div>
                   {/* Image on the right */}
                   <div className="ml-4">
@@ -93,12 +92,8 @@ export default function Profile() {
                       src={post.postImg}
                       alt={post.postTitle}
                       url={post.slug}
+                      className=" w-20 h-20 object-cover rounded-md"
                     />
-                    {/* <img
-                      src={post.postImg}
-                      alt={post.postTitle}
-                      className="w-32 h-24 object-cover rounded-md"
-                    /> */}
                   </div>
                 </div>
               </Link>
