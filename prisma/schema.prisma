@@ -97,8 +97,12 @@ model Comment {
 
 model SavedPost {
   id        String   @id @default(cuid()) @map("_id")
-  userEmail    String
-  postSlug    String
+  userEmail String
+  postSlug  String
+  postImg   String
+  postTitle String
   user      User     @relation(fields: [userEmail], references: [email])
-  post      Post @relation(fields: [postSlug], references: [slug])
+  post      Post     @relation(fields: [postSlug], references: [slug])
+
+  @@unique([postSlug, postImg, postTitle])
 }

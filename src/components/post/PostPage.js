@@ -86,16 +86,16 @@ function PostPage({ params }) {
                 </div>
               </div>
               <div className="flex gap-2">
-                {/* <CiBookmarkPlus
-                  onClick={handleBookmark}
-                  className=" scale-150"
-                /> */}
                 <button
                   onClick={savePost}
                   disabled={isSaved}
-                  className="bg-indigo-500 cursor-pointer rounded text-white"
+                  className="bg-indigo-500 cursor-pointer rounded text-white p-2"
                 >
-                  {isSaved ? "Saved" : "Save Post"}
+                  {isSaved
+                    ? "Saved"
+                    : `Save Post ${(
+                        <CiBookmarkPlus className=" scale-150" />
+                      )}`}
                 </button>
 
                 <button
