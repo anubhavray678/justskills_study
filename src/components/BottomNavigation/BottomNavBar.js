@@ -130,7 +130,7 @@ function BottomNavBar() {
           value === 0 ? (
             <GoHomeFill style={{ color: "#adaaf2" }} />
           ) : (
-            <GoHome style={{ color: "#772eff" }} />
+            <GoHome style={{ color: "#adaaf2" }} />
           )
         }
       />
