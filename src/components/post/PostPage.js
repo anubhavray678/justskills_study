@@ -90,7 +90,11 @@ function PostPage({ params }) {
                   onClick={handleBookmark}
                   className=" scale-150"
                 /> */}
-                <button onClick={savePost} disabled={isSaved}>
+                <button
+                  onClick={savePost}
+                  disabled={isSaved}
+                  className="bg-indigo-500 cursor-pointer rounded text-white"
+                >
                   {isSaved ? "Saved" : "Save Post"}
                 </button>
 
