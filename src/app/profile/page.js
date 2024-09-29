@@ -70,7 +70,9 @@ export default function Profile() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mb-4">Saved Posts</h2>
+        <h2 className="text-2xl font-bold mb-4 p-2 bg-white text-center">
+          Saved Posts
+        </h2>
         <div className="saved-posts grid gap-4">
           {savedPosts.length > 0 ? (
             savedPosts.slice(0, displayedBlogsCount).map((post) => (
