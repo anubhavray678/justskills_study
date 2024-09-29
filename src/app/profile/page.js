@@ -70,10 +70,10 @@ export default function Profile() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mt-2 mb-4 p-2 bg-white text-center">
+        <h2 className="text-2xl font-bold mb-4 p-2 bg-white text-center">
           Saved Posts
         </h2>
-        <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className="saved-posts grid gap-4">
           {savedPosts.length > 0 ? (
             savedPosts.slice(0, displayedBlogsCount).map((post) => (
               <Link
@@ -81,7 +81,7 @@ export default function Profile() {
                 href={`/posts/${post.postSlug}`}
                 className="block"
               >
-                <div className="flex items-center justify-between bg-white border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center justify-between bg-white border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300 pl-0 sm:pl-10 pr-0 sm:pr-10">
                   {/* Title on the left */}
                   <div className="flex-grow">
                     <h3 className="text-xl font-semibold text-gray-800">
