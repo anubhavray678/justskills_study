@@ -1,18 +1,39 @@
 "use client";
 
 import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Profile() {
   const { status, data } = useSession();
   const router = useRouter();
+  const [savedPosts, setSavedPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  // Fetch saved posts when the component mounts
+  useEffect(() => {
+    const fetchSavedPosts = async () => {
+      try {
+        const response = await axios.get("/api/savepost");
+        setSavedPosts(response.data);
+      } catch (error) {
+        console.error("Error fetching saved posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSavedPosts();
+  }, []);
   useEffect(() => {
     if (status === "unauthenticated") {
       router.push("/login");
     }
   }, [status]);
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   if (status === "authenticated" && data && data.user) {
     return (
@@ -37,6 +58,39 @@ export default function Profile() {
               Logout
             </button>
           </div>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4">Saved Posts</h2>
+        <div className="saved-posts grid gap-4">
+          {savedPosts.length > 0 ? (
+            savedPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/posts/${post.postSlug}`}
+                className="block"
+              >
+                <div className="flex items-center justify-between bg-white border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
+                  {/* Title on the left */}
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      {post.postTitle}
+                    </h3>
+                    <p className="text-gray-600">Slug: {post.postSlug}</p>
+                  </div>
+                  {/* Image on the right */}
+                  <div className="ml-4">
+                    <img
+                      src={post.postImg}
+                      alt={post.postTitle}
+                      className="w-32 h-24 object-cover rounded-md"
+                    />
+                  </div>
+                </div>
+              </Link>
+            ))
+          ) : (
+            <p>No saved posts found.</p>
+          )}
         </div>
       </div>
     );

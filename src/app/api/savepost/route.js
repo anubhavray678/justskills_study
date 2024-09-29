@@ -34,20 +34,23 @@ export const GET = async (req) => {
   const session = await getAuthSession();
 
   if (!session) {
-    return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
-    );
+    return new NextResponse(JSON.stringify({ message: "Not Authenticated!" }), {
+      status: 401,
+    });
   }
 
   try {
     const savedPosts = await prisma.savedPost.findMany({
       where: { userEmail: session.user.email },
-      include: { post: true },
+      include: { post: true }, // Include the related post information
     });
+
     return new NextResponse(JSON.stringify(savedPosts), { status: 200 });
   } catch (error) {
+    console.error(error);
     return new NextResponse(
-      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+      JSON.stringify({ message: "Something went wrong!" }),
+      { status: 500 }
     );
   }
 };
