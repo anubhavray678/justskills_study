@@ -30,7 +30,9 @@ export const POST = async (req) => {
   }
 };
 
-export const GET = async (req) => {
+//get api
+
+export async function GET(req) {
   const session = await getAuthSession();
 
   if (!session) {
@@ -40,9 +42,15 @@ export const GET = async (req) => {
   }
 
   try {
+    // No need to include post: true since postSlug, postImg, and postTitle are in SavedPost
     const savedPosts = await prisma.savedPost.findMany({
       where: { userEmail: session.user.email },
-      include: { post: true }, // Include the related post information
+      select: {
+        postSlug: true,
+        postTitle: true,
+        postImg: true,
+        // Include other fields you want to return if necessary
+      },
     });
 
     return new NextResponse(JSON.stringify(savedPosts), { status: 200 });
@@ -53,4 +61,4 @@ export const GET = async (req) => {
       { status: 500 }
     );
   }
-};
+}
