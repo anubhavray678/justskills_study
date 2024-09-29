@@ -7,6 +7,8 @@ import MenuCategories from "../menuCategories/MenuCategories";
 import { FaShareAlt } from "react-icons/fa";
 import Article from "../ads/inArticle";
 import { CiBookmarkPlus } from "react-icons/ci";
+
+import axios from "axios";
 const getData = async (slug) => {
   const res = await fetch(`https://justskills.in/api/posts/${slug}`, {
     cache: "no-store",
@@ -22,6 +24,17 @@ const getData = async (slug) => {
 function PostPage({ params }) {
   const { slug } = params;
   const [data, setData] = useState(null);
+
+  const [isSaved, setIsSaved] = useState(false);
+
+  const savePost = async () => {
+    try {
+      await axios.post("/api/savePost", { postId: data.id });
+      setIsSaved(true);
+    } catch (error) {
+      console.error("Error saving post:", error);
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,7 +60,6 @@ function PostPage({ params }) {
       console.log("Web Share API not supported in this browser.");
     }
   };
-  const handleBookmark = () => {};
   return (
     <div className={styles.container}>
       {data && (
@@ -73,19 +85,23 @@ function PostPage({ params }) {
                   </span>
                 </div>
               </div>
-              {/* <div className="flex gap-2"> */}
-              {/* <CiBookmarkPlus
+              <div className="flex gap-2">
+                {/* <CiBookmarkPlus
                   onClick={handleBookmark}
                   className=" scale-150"
                 /> */}
-              <button
-                className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
-                onClick={handleShare}
-              >
-                <span>Share</span>
-                <FaShareAlt />
-              </button>
-              {/* </div> */}
+                <button onClick={savePost} disabled={isSaved}>
+                  {isSaved ? "Saved" : "Save Post"}
+                </button>
+
+                <button
+                  className="bg-green-600 p-2 rounded text-white flex justify-between items-center gap-2"
+                  onClick={handleShare}
+                >
+                  <span>Share</span>
+                  <FaShareAlt />
+                </button>
+              </div>
             </div>
           </div>
           {data.img && (

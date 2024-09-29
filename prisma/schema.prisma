@@ -47,6 +47,8 @@ model User {
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
+  savedPosts  SavedPost[]
+
 }
 
 model VerificationToken {
@@ -78,6 +80,8 @@ model Post {
   userEmail String
   user      User      @relation(fields: [userEmail], references: [email])
   comments  Comment[]
+  savedBy SavedPost[]
+
 }
 
 model Comment {
@@ -88,4 +92,13 @@ model Comment {
   user      User     @relation(fields: [userEmail], references: [email])
   postSlug  String
   post      Post     @relation(fields: [postSlug], references: [slug])
+}
+
+
+model SavedPost {
+  id        String   @id @default(cuid()) @map("_id")
+  userId    String
+  postId    String
+  user      User     @relation(fields: [userId], references: [id])
+  post      Post @relation(fields: [postId], references: [id])
 }
