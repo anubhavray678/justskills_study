@@ -70,7 +70,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mb-4 p-2 bg-white text-center">
+        <h2 className="text-2xl font-bold mt-2 mb-4 p-2 bg-white text-center">
           Saved Posts
         </h2>
         <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
