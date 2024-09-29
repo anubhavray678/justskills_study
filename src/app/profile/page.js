@@ -73,7 +73,7 @@ export default function Profile() {
         <h2 className="text-2xl font-bold mb-4 p-2 bg-white text-center">
           Saved Posts
         </h2>
-        <div className="saved-posts grid gap-4">
+        <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           {savedPosts.length > 0 ? (
             savedPosts.slice(0, displayedBlogsCount).map((post) => (
               <Link
@@ -94,7 +94,7 @@ export default function Profile() {
                       src={post.postImg}
                       alt={post.postTitle}
                       url={post.slug}
-                      className=" w-20 h-20 object-cover rounded-md"
+                      className=" w-10 h-10 object-cover rounded-md"
                     />
                   </div>
                 </div>
