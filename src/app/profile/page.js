@@ -48,7 +48,7 @@ export default function Profile() {
   if (status === "authenticated" && data && data.user) {
     return (
       <div className="h-full">
-        <div className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className="py-8 px-8 max-w-sm mx-auto rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
             src={data.user.image}
@@ -70,9 +70,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold mb-4 p-2 bg-white text-center">
-          Saved Posts
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 p-2 text-center">Saved Posts</h2>
         <div className="saved-posts grid gap-4">
           {savedPosts.length > 0 ? (
             savedPosts.slice(0, displayedBlogsCount).map((post) => (
@@ -81,7 +79,7 @@ export default function Profile() {
                 href={`/posts/${post.postSlug}`}
                 className="block"
               >
-                <div className="flex items-center justify-between bg-white border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300 pl-4 sm:pl-20 pr-4 sm:pr-20">
+                <div className="flex items-center justify-between border border-gray-300 rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300 pl-4 sm:pl-20 pr-4 sm:pr-20">
                   {/* Title on the left */}
                   <div className="flex-grow">
                     <h3 className="text-xl font-semibold text-gray-800">
