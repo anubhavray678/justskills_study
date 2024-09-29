@@ -29,7 +29,7 @@ function PostPage({ params }) {
 
   const savePost = async () => {
     try {
-      await axios.post("/api/savePost", { postId: data.id });
+      await axios.post("/api/savepost", { postSlug: data.slug });
       setIsSaved(true);
     } catch (error) {
       console.error("Error saving post:", error);

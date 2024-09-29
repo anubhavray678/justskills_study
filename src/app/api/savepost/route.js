@@ -8,13 +8,13 @@ export const POST = async (req, res) => {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
-  const { postId } = req.body;
+  const { postSlug } = req.body;
 
   try {
     const savedPost = await prisma.savedPost.create({
       data: {
-        userId: session.user.id,
-        postId,
+        userEmail: session.user.email,
+        postSlug,
       },
     });
     res.status(201).json(savedPost);
@@ -32,7 +32,7 @@ export const GET = async (req, res) => {
 
   try {
     const savedPosts = await prisma.savedPost.findMany({
-      where: { userId: session.user.id },
+      where: { userEmail: session.user.email },
       include: { post: true },
     });
     res.status(200).json(savedPosts);
