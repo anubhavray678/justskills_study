@@ -3,13 +3,15 @@
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Profile() {
   const { status, data } = useSession();
   const router = useRouter();
   const [savedPosts, setSavedPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [displayedBlogsCount, setDisplayedBlogsCount] = useState(9);
 
   // Fetch saved posts when the component mounts
   useEffect(() => {
@@ -31,8 +33,16 @@ export default function Profile() {
       router.push("/login");
     }
   }, [status]);
+
+  const loadMore = () => {
+    setDisplayedBlogsCount((prevCount) => prevCount + 3);
+  };
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="flex justify-center items-center">
+        <ClipLoader size={50} color={"#8a4dfa"} loading={loading} />
+      </div>
+    );
   }
 
   if (status === "authenticated" && data && data.user) {
@@ -63,7 +73,7 @@ export default function Profile() {
         <h2 className="text-2xl font-bold mb-4">Saved Posts</h2>
         <div className="saved-posts grid gap-4">
           {savedPosts.length > 0 ? (
-            savedPosts.map((post) => (
+            savedPosts.slice(0, displayedBlogsCount).map((post) => (
               <Link
                 key={post.id}
                 href={`/posts/${post.postSlug}`}
@@ -79,11 +89,16 @@ export default function Profile() {
                   </div>
                   {/* Image on the right */}
                   <div className="ml-4">
-                    <img
+                    <ImageWithSpinner
+                      src={blog.postImg}
+                      alt={blog.postTitle}
+                      url={blog.slug}
+                    />
+                    {/* <img
                       src={post.postImg}
                       alt={post.postTitle}
                       className="w-32 h-24 object-cover rounded-md"
-                    />
+                    /> */}
                   </div>
                 </div>
               </Link>
@@ -92,9 +107,43 @@ export default function Profile() {
             <p>No saved posts found.</p>
           )}
         </div>
+        {displayedBlogsCount < blogs.length && (
+          <div className="text-center mt-4">
+            <button
+              onClick={loadMore}
+              className="px-4 py-2 text-sm font-medium text-white bg-indigo-400 rounded-lg hover:bg-indigo-500"
+            >
+              Load more
+            </button>
+          </div>
+        )}
       </div>
     );
   }
 
   return null;
 }
+
+const ImageWithSpinner = ({ src, alt, url }) => {
+  const [imageLoading, setImageLoading] = useState(true);
+
+  return (
+    <div className="relative h-56 w-full">
+      {imageLoading && (
+        <div className="absolute inset-0 flex justify-center items-center">
+          <ClipLoader size={50} color={"#8a4dfa"} loading={imageLoading} />
+        </div>
+      )}
+      <Link href={`/posts/${url}`} passHref>
+        <img
+          src={src}
+          alt={alt}
+          className={`h-56 w-full object-fill transition-opacity duration-500 ${
+            imageLoading ? "opacity-0" : "opacity-100"
+          }`}
+          onLoad={() => setImageLoading(false)}
+        />
+      </Link>
+    </div>
+  );
+};
