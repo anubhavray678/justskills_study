@@ -10,6 +10,7 @@ import { Testimonials } from "@/components/new/Testimonials";
 import { Faq } from "@/components/new/Faq";
 import { benefitOne } from "@/components/new/data";
 import FeaturedCategory from "@/components/featurescategory/FeaturedCategory";
+import YouTubePlayer from "@/components/video/YouTubePlayer";
 export const metadata = {
   title:
     "Justskills - Read different topics on coding, design, web dev, projects, placement and more.",
@@ -41,6 +42,7 @@ export default function Home({ searchParams }) {
   return (
     <div className={styles.container}>
       <Featured />
+
       <Article />
       <FeaturedArticle page={page} />
 

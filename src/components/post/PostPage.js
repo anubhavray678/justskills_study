@@ -9,6 +9,8 @@ import Article from "../ads/inArticle";
 import { CiBookmarkPlus } from "react-icons/ci";
 
 import axios from "axios";
+import YouTubePlayer from "../video/YouTubePlayer";
+
 const getData = async (slug) => {
   const res = await fetch(`https://justskills.in/api/posts/${slug}`, {
     cache: "no-store",
@@ -124,7 +126,9 @@ function PostPage({ params }) {
         <div className="mt-3">
           <Article />
         </div>
+
         <div className={styles.post}>
+          {data.video && <YouTubePlayer videoId={data.video} />}
           {data && (
             <div
               className="quill-editor"

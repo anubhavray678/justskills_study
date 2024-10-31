@@ -6,6 +6,7 @@ const nextConfig = {
       "firebasestorage.googleapis.com",
       "avatars.githubusercontent.com",
       "storyset.com",
+      "www.youtube.com",
     ],
   },
 };
