@@ -29,6 +29,7 @@ const WritePage = () => {
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
+  const [video, setVideo] = useState("");
 
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
@@ -84,6 +85,7 @@ const WritePage = () => {
       method: "POST",
       body: JSON.stringify({
         title,
+        video,
         desc: value,
         img: media,
         slug: slug,
@@ -102,6 +104,10 @@ const WritePage = () => {
     setTitle(newTitle);
     const autoSlug = generateSlug(newTitle);
     setSlug(autoSlug);
+  }
+  function handleVideo(e) {
+    const newVideo = e.target.value;
+    setVideo(newVideo);
   }
 
   //Custom Tool Bar
@@ -217,6 +223,28 @@ const WritePage = () => {
                     autoComplete="given-name"
                     className="block w-full rounded-md border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
                     placeholder="Type the Course title"
+                  />
+                </div>
+              </div>
+              {/* videoLink */}
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="video"
+                  className="block text-sm font-medium leading-6 text-gray-900 mb-2 "
+                  onChange={(e) => setVideo(e.target.value)}
+                >
+                  Video URL
+                </label>
+                <div className="mt-2">
+                  <input
+                    onChange={handleVideo}
+                    type="text"
+                    value={video}
+                    name="video"
+                    id="video"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md border-0 py-2 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
+                    placeholder="your article video url here"
                   />
                 </div>
               </div>

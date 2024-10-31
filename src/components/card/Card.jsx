@@ -30,10 +30,14 @@ const Card = ({ item }) => {
         <Link href={`/posts/${item.slug}`} passHref className={styles.link}>
           Read More
         </Link>
-        <div className="bg-violet-600 text-white font-semibold text-center p-2 gap-5 items-center flex-row justify-center flex">
-          <FaVideo />
-          <span>Video</span>
-        </div>
+        {item.videoLink && (
+          <Link href={item.videoLink} passHref>
+            <div className="bg-violet-600 text-white font-semibold text-center p-2 gap-5 items-center flex-row justify-center flex">
+              <FaVideo />
+              <span>Video</span>
+            </div>
+          </Link>
+        )}
       </div>
     </div>
   );
