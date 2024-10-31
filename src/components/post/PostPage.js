@@ -128,7 +128,7 @@ function PostPage({ params }) {
         </div>
 
         <div className={styles.post}>
-          {data.video && (
+          {data && (
             <div>
               <YouTubePlayer videoId={`${data.video}`} />
             </div>
