@@ -9,7 +9,7 @@ import Article from "../ads/inArticle";
 import { CiBookmarkPlus } from "react-icons/ci";
 
 import axios from "axios";
-import YouTubePlayer from "../video/YouTubePlayer";
+import YouTubePlayer from "@/components/video/YouTubePlayer";
 
 const getData = async (slug) => {
   const res = await fetch(`https://justskills.in/api/posts/${slug}`, {
