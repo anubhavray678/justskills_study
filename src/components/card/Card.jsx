@@ -31,7 +31,7 @@ const Card = ({ item }) => {
           Read More
         </Link>
         {item.video && (
-          <Link href={item.videoLink} passHref>
+          <Link href={item.video} passHref>
             <div className="bg-violet-600 text-white font-semibold text-center p-2 gap-5 items-center flex-row justify-center flex">
               <FaVideo />
               <span>Video</span>
