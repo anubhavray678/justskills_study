@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./card.module.css";
 import Link from "next/link";
+import { FaVideo } from "react-icons/fa";
 
 const Card = ({ item }) => {
   return (
@@ -29,6 +30,10 @@ const Card = ({ item }) => {
         <Link href={`/posts/${item.slug}`} passHref className={styles.link}>
           Read More
         </Link>
+        <div className="bg-violet-600 text-white font-semibold text-center p-2 gap-5 items-center flex-row justify-center flex">
+          <FaVideo />
+          <span>Video</span>
+        </div>
       </div>
     </div>
   );
