@@ -140,10 +140,10 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="https://justskills.in/read?cat=placement"
+                    href="https://justskills.in/read?cat=leetcode-150"
                     className="hover:underline"
                   >
-                    Placement
+                    Leetcode Top 150
                   </a>
                 </li>
               </ul>

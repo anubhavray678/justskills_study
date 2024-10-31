@@ -60,11 +60,11 @@ function BottomNavBar() {
     switch (route) {
       case "/":
         return 0;
-      case "/community":
+      case "/category":
         return 1;
-      case "/bookings":
+      case "/resume":
         return 2;
-      case "/account":
+      case "/profile":
         return 3;
       default:
         return 0;
@@ -81,7 +81,7 @@ function BottomNavBar() {
         router.push("/category");
         break;
       case 2:
-        router.push("/jobs");
+        router.push("/resume");
         break;
       case 3:
         router.push("/profile");
@@ -152,7 +152,7 @@ function BottomNavBar() {
         }}
       />
       <BottomNavigationAction
-        label="Jobs"
+        label="Resume"
         value={2}
         icon={
           value === 2 ? (

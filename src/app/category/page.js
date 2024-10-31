@@ -3,11 +3,12 @@ import CategoryCard from "@/components/category/CategoryCard";
 const data = [
   {
     id: 1,
-    title: "Data Structures",
-    text: "Explore fundamental data structures with real-world examples.",
-    url: "data-structure",
-    imageUrl: "/data.jpg",
+    title: "Leetcode Top 150",
+    text: "Expert advice and resources for cracking job placement interviews.",
+    url: "leetcode-150",
+    imageUrl: "/placemen.png",
   },
+
   {
     id: 2,
     title: "Algorithms",
@@ -66,10 +67,10 @@ const data = [
   },
   {
     id: 11,
-    title: "Placement",
-    text: "Expert advice and resources for cracking job placement interviews.",
-    url: "placement",
-    imageUrl: "/placement.png",
+    title: "Data Structures",
+    text: "Explore fundamental data structures with real-world examples.",
+    url: "data-structure",
+    imageUrl: "/data.jpg",
   },
 ];
 

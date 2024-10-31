@@ -82,21 +82,21 @@ const BlogPage = ({ searchParams }) => {
           <AccordionContent className="border-2 rounded-lg flex justify-between border-none ">
             {/* <div className="container w-full h-full bg-secondary rounded-lg p-5 md:hidden"> */}
             <div
-              class="rounded-xl select-none flex-col justify-center bg-indigo-100 
+              className="rounded-xl select-none flex-col justify-center bg-indigo-100 
         dark:bg-indigo-500 border  w-full h-full"
             >
-              <div class=" py-10 px-8 text-white ">
-                <span class="rounded-full bg-white px-3 py-1 font-medium text-blue-600">
+              <div className=" py-10 px-8 text-white ">
+                <span className="rounded-full bg-white px-3 py-1 font-medium text-blue-600">
                   Justskills Read
                 </span>
-                <p class="my-6 text-3xl font-semibold leading-10 text-indigo-500 dark:text-white">
+                <p className="my-6 text-3xl font-semibold leading-10 text-indigo-500 dark:text-white">
                   Increase Knowledge with{" "}
-                  <span class="whitespace-nowrap py-2 text-cyan-300 sm: text-lg">
+                  <span className="whitespace-nowrap py-2 text-cyan-300 sm: text-lg">
                     High-Quality Articles
                   </span>
                   .
                 </p>
-                <p class="mb-4 text-indigo-500 dark:text-white">
+                <p className="mb-4 text-indigo-500 dark:text-white">
                   For all avid readers, here&apos;s a carefully curated
                   collection of articles designed to enhance your skills in Data
                   Structures and Algorithms (DSA).Additionally, foundational
@@ -106,7 +106,7 @@ const BlogPage = ({ searchParams }) => {
                 <a
                   href="/read"
                   target="blank"
-                  class="font-semibold tracking-wide underline underline-offset-4 text-indigo-500 dark:text-white"
+                  className="font-semibold tracking-wide underline underline-offset-4 text-indigo-500 dark:text-white"
                 >
                   Learn More
                 </a>
@@ -118,23 +118,23 @@ const BlogPage = ({ searchParams }) => {
         </AccordionItem>
       </Accordion>
       <div className="flex gap-0 md:gap-32 p-4 md:p-0">
-        <div className="container w-full h-full bg-secondary rounded-lg p-5 hidden md:flex">
+        <div className="flex-1 w-full h-full bg-secondary rounded-lg p-5 hidden md:flex">
           <div
-            class="rounded-xl select-none flex-col justify-center bg-indigo-100 
+            className=" rounded-xl select-none flex-col justify-center bg-indigo-100 
         dark:bg-indigo-500 border  w-full h-full"
           >
-            <div class=" py-10 px-8 text-white ">
-              <span class="rounded-full bg-white px-3 py-1 font-medium text-blue-600">
+            <div className=" py-10 px-8 text-white ">
+              <span className="rounded-full bg-white px-3 py-1 font-medium text-blue-600">
                 Justskills Read
               </span>
-              <p class="my-6 text-3xl font-semibold leading-10 text-indigo-500 dark:text-white">
+              <p className="my-6 text-3xl font-semibold leading-10 text-indigo-500 dark:text-white">
                 Increase Knowledge with{" "}
-                <span class="whitespace-nowrap py-2 text-cyan-300">
+                <span className="whitespace-nowrap py-2 text-cyan-300">
                   High-Quality Articles
                 </span>
                 .
               </p>
-              <p class="mb-4 text-indigo-500 dark:text-white">
+              <p className="mb-4 text-indigo-500 dark:text-white">
                 For all avid readers, here&apos;s a carefully curated collection
                 of articles designed to enhance your skills in Data Structures
                 and Algorithms (DSA).Additionally, foundational concepts of
@@ -144,7 +144,7 @@ const BlogPage = ({ searchParams }) => {
               <a
                 href="/read"
                 target="blank"
-                class="font-semibold tracking-wide underline underline-offset-4 text-indigo-500 dark:text-white"
+                className="font-semibold tracking-wide underline underline-offset-4 text-indigo-500 dark:text-white"
               >
                 Learn More
               </a>
@@ -152,56 +152,34 @@ const BlogPage = ({ searchParams }) => {
             <img className="rounded-lg object-cover" src="/read.png" />
           </div>
         </div>
-        <div>
-          <h1 className="text-4xl font-extrabold pb-5 pt-5 font-sans">
-            Read, Code, Create, Execute.
-          </h1>
-          <p className="leading-8 font-semibold text-slate-500 dark:text-white text-xl pb-5 pt-5">
+        <div className="">
+          <div className={styles.container}>
+            <h1 className="text-4xl font-extrabold pb-5 pt-5 font-sans">
+              Read, Code, Create, Execute.
+            </h1>
+            {/* <h1 className="text-4xl font-extrabold pb-5 pt-5 font-sans">
+              {cat}
+            </h1> */}
+            <div className={styles.content}>
+              <CardList page={page} cat={cat} />
+            </div>
+          </div>
+
+          <p className="leading-8 font-semibold text-slate-500 dark:text-white text-xl pb-5 pt-5 invisible">
             Welcome to JustSkills Read, your destination for premium text-based
             courses. Currently, we offer three courses, with more in
             development. Each course will receive weekly updates with new
             articles added incrementally, ensuring a steady stream of content
             for your learning journey.
           </p>
-          <p className="leading-8 font-semibold text-slate-500 dark:text-white text-xl pb-5 pt-5">
-            Now, if you&apos;re an absolute beginner and want to start with
-            learning a programming language, we have 2 options for you:
-          </p>
-
-          {/* <h1 className="leading-8 text-2xl pb-5 pt-5">
-            1.
-            <span className="underline cursor-pointer  decoration-sky-500 pl-3 hover:text-indigo-400">
-              <Link href={"/cpp-fundamentals"}>
-                {" "}
-                Language Fundamentals: C++{" "}
-              </Link>
-            </span>
-          </h1> */}
-
-          <p className="leading-8 font-semibold text-slate-500 dark:text-white text-xl pb-5 pt-5">
-            This comprehensive Data Structures and Algorithms (DSA) course
-            begins with foundational concepts and progresses to advanced topics,
-            providing a thorough understanding and ample practice opportunities.
-          </p>
-
-          {/* <h1 className="leading-8 text-2xl pb-5 pt-5">
-            2.
-            <span className="underline cursor-pointer  decoration-sky-500 pl-3 hover:text-indigo-400">
-              <Link href={"/data-structures"}> Data Structures </Link>
-            </span>
-          </h1>
-          <h1 className="leading-8 text-2xl pb-5 pt-5">
-            3.
-            <span className="underline cursor-pointer  decoration-sky-500 pl-3 hover:text-indigo-400">
-              <Link href={"/algorithms"}> Algorithms </Link>
-            </span>
-          </h1> */}
         </div>
       </div>
       <div className={styles.container}>
-        <h1 className={styles.title}>{cat} : Read different topics</h1>
+        {/* <h1 className={styles.title}>{cat}</h1> */}
         <div className={styles.content}>
-          <CardList page={page} cat={cat} />
+          <div className="invisible">
+            <CardList page={page} cat={cat} />
+          </div>
           <MenuCategories />
         </div>
       </div>

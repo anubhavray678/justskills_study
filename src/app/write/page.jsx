@@ -152,6 +152,7 @@ const WritePage = () => {
               className="border"
               onChange={(e) => setCatSlug(e.target.value)}
             >
+              <option value="leetcode-150">Leetcode - Top Interview 150</option>
               <option value="data-structure">Data Structures</option>
               <option value="algorithms">Algorithms</option>
               <option value="system-design">System Design</option>
@@ -161,7 +162,6 @@ const WritePage = () => {
               <option value="emerging-tech">emerging-tech</option>
               <option value="programming">Programming</option>
               <option value="project">project</option>
-              <option value="placement">placement</option>
             </select>
             <div>
               <button className={styles.button} onClick={() => setOpen(!open)}>
