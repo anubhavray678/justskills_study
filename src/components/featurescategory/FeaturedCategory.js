@@ -70,10 +70,10 @@ const data = [
   },
   {
     id: 11,
-    title: "Placement",
+    title: "Leetcode Interview 150",
     text: "Expert advice and resources for cracking job placement interviews.",
-    url: "placement",
-    imageUrl: "/placement.png",
+    url: "leetcode-150",
+    imageUrl: "/placemen.png",
   },
 ];
 function FeaturedCategory() {
