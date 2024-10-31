@@ -132,7 +132,9 @@ const MenuCategories = () => {
         <Link href="/read?cat=placement">
           <div className={styles.categoryItem}>
             <ul>
-              <li className="text-xl font-sans font-semibold ">Placement</li>
+              <li className="text-xl font-sans font-semibold ">
+                Leetcode Interview 150
+              </li>
               <li className="font-sans ">
                 Expert advice and resources for cracking job placement
                 interviews.
