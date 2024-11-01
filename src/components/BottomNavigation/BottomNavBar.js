@@ -62,7 +62,7 @@ function BottomNavBar() {
         return 0;
       case "/category":
         return 1;
-      case "/resume":
+      case "/jobmatch":
         return 2;
       case "/profile":
         return 3;
@@ -81,7 +81,7 @@ function BottomNavBar() {
         router.push("/category");
         break;
       case 2:
-        router.push("/resume");
+        router.push("/jobmatch");
         break;
       case 3:
         router.push("/profile");
@@ -152,7 +152,7 @@ function BottomNavBar() {
         }}
       />
       <BottomNavigationAction
-        label="Resume"
+        label="JobMatch"
         value={2}
         icon={
           value === 2 ? (

@@ -84,10 +84,10 @@ export default function Footer() {
                 </li>
                 <li className="mb-4">
                   <a
-                    href="https://justskills.in/jobs"
+                    href="https://justskills.in/jobmatch"
                     className="hover:underline"
                   >
-                    Jobs
+                    JobMatch
                   </a>
                 </li>
                 <li className="mb-4">
