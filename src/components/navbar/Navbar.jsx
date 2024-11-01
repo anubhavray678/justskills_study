@@ -105,6 +105,9 @@ const Navbar = () => {
           <Link href="/read" className={styles.link}>
             Read
           </Link>
+          <Link href="/jobmatch" className={styles.link}>
+            JobMatcher
+          </Link>
           <Link href="/category" className={styles.link}>
             Category
           </Link>
