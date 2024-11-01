@@ -128,11 +128,14 @@ function PostPage({ params }) {
         </div>
 
         <div className={styles.post}>
-          {data && (
+          {/* {data && (
             <div className="pt-2 pb-2">
               <YouTubePlayer videoId={`${data.video}`} />
             </div>
-          )}
+          )} */}
+          <div className={data && data.video ? "pt-2 pb-2" : "hidden"}>
+            {data && data.video && <YouTubePlayer videoId={data.video} />}
+          </div>
           {data && (
             <div
               className="quill-editor"
