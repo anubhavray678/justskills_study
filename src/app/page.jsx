@@ -1,16 +1,14 @@
-import Link from "next/link";
 import styles from "./homepage.module.css";
 import Featured from "@/components/featured/Featured";
 import LatestBlog from "@/components/latestBlog/LatestBlog";
 import FeaturedArticle from "@/components/cardList/FeaturedArticle";
 import Article from "@/components/ads/inArticle";
 import { Benefits } from "@/components/new/Benefits";
-import { SectionTitle } from "@/components/new/SectionTitle";
 import { Testimonials } from "@/components/new/Testimonials";
 import { Faq } from "@/components/new/Faq";
 import { benefitOne } from "@/components/new/data";
 import FeaturedCategory from "@/components/featurescategory/FeaturedCategory";
-import YouTubePlayer from "@/components/video/YouTubePlayer";
+
 export const metadata = {
   title:
     "Justskills - Read different topics on coding, design, web dev, projects, placement and more.",
