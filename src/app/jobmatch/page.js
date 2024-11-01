@@ -122,7 +122,7 @@ export default function ResumeMatcher() {
           }
         `}</style>
 
-        <div className="relative z-10 text-center text-white p-12 rounded-3xl shadow-2xl max-w-md mx-4">
+        <div className="relative z-10 text-center text-white p-12 rounded-3xl shadow-2xl max-w-md mx-4 hidden sm:flex">
           <img
             className=" object-cover rounded-3xl transform transition-transform duration-500 hover:scale-105"
             src="./placement.png"
@@ -135,7 +135,7 @@ export default function ResumeMatcher() {
 
       <div
         ref={matchSectionRef}
-        className="relative  p-8  overflow-hidden mx-auto  max-w-xl rounded-xl shado"
+        className="relative  p-8  overflow-hidden mx-auto  max-w-xl rounded-xl"
       >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
