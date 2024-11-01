@@ -29,8 +29,9 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <ThemeContextProvider>
             <ThemeProvider>
-              <div className="container">
-                <div className="wrapper">
+              {/* <div className="container"> */}
+              <div className="wrapper">
+                <div className="pl-0 pr-0 sm:pl-24 sm:pr-24">
                   <Navbar />
                   <div className="pt-[100px]">{children}</div>
                   <Footer />
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
                   <BottomNavBar />
                 </div>
               </div>
+              {/* </div> */}
             </ThemeProvider>
           </ThemeContextProvider>
         </AuthProvider>
