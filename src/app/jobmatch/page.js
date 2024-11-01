@@ -219,6 +219,7 @@ export default function ResumeMatcher() {
                 id="resume"
                 name="resume"
                 rows={5}
+                minlength="50"
                 className="w-full p-3 rounded-lg focus:ring-2 focus:ring-violet-400 outline-none bg-gray-100 dark:text-black"
                 placeholder="Paste your resume here..."
                 required
@@ -235,6 +236,7 @@ export default function ResumeMatcher() {
                 id="jobDescription"
                 name="jobDescription"
                 rows={5}
+                minlength="25"
                 className="w-full p-3 rounded-lg focus:ring-2 focus:ring-violet-400 outline-none bg-gray-100 dark:text-black"
                 placeholder="Paste the job description here..."
                 required
