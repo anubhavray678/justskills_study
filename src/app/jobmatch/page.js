@@ -135,7 +135,7 @@ export default function ResumeMatcher() {
 
       <div
         ref={matchSectionRef}
-        className="relative  p-8  overflow-hidden mx-auto  max-w-xl rounded-xl"
+        className="relative p-2  overflow-hidden mx-auto  max-w-xl rounded-xl"
       >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
