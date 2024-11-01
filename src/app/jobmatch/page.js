@@ -207,13 +207,13 @@ export default function ResumeMatcher() {
           ref={matchSectionRef}
           className="relative p-2  overflow-hidden mx-auto  max-w-xl rounded-xl"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 pt-5">
             <div>
               <label
                 htmlFor="resume"
                 className="block text-sm font-semibold mb-1"
               >
-                Resume
+                Paste your Resume here
               </label>
               <textarea
                 id="resume"
